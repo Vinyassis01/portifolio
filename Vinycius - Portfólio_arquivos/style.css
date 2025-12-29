@@ -4,10 +4,10 @@
   --cor1: #bacee0;
   --cor2: #d7e4e3;
   --cor3: #117f83;
-  --cor4: #22aed8;
-  --cor5: #0d3436;
-  --cor6: #145561;
-  --cor7: #638d99;
+  --cor4: #4f575a;
+  --cor5: #2a5551;
+  --cor6: #20838b;
+  --cor7: #072e38;
   --cor8: #6cd6d6;
   
   --fonte-padrão: "Montserrat", sans-serif;
@@ -21,7 +21,7 @@
 }
 
 body {
-  background-image: linear-gradient(to bottom, var(--cor5), var(--cor7));
+  background-image: linear-gradient(to bottom, var(--cor4), var(--cor7));
   min-height: 100vh;
   background-attachment: fixed;
   font-family: var(--fonte-padrão);
@@ -81,7 +81,7 @@ nav > a:hover {
 }
 
 .left-sidebar {
-  background-color: var(--cor5);
+  background-image: linear-gradient(to bottom, var(--cor7), var(--cor5));
   box-shadow: 10px 14px 10px var(--cor4);
   padding: 60px 0;
   border-radius: 20px;
@@ -91,6 +91,26 @@ nav > a:hover {
   justify-content: flex-start;
   flex-direction: column;
   width: 300px;
+  flex-shrink: 0;
+  min-height: calc(100vh - 80px);
+  position: static;
+  top: 50px;
+  margin-right: 50px;
+  padding-top: 50px;
+  padding-left: 10px;
+  gap: 20px;
+}
+.custom-left-sidebar {
+  background-image: linear-gradient(to right, var(--cor4), var(--cor3));
+  box-shadow: 10px 14px 10px var(--cor4);
+  padding: 60px 0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  flex-direction:column;
+  width: 400px;
   flex-shrink: 0;
   min-height: calc(100vh - 80px);
   position: static;
@@ -225,6 +245,10 @@ hr {
   min-width: 0;
 }
 
+.nav-color{
+  background-image: linear-gradient(to right, var(--cor6), var(--cor7));
+
+}
 .content-section {
   background: transparent;
   box-shadow: none;
@@ -232,7 +256,7 @@ hr {
   border: none;
   margin-bottom: 40px;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   gap: 15px;
   position: relative;
 }
@@ -241,18 +265,21 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--cor5);
+  background-image: linear-gradient(to right, var(--cor7), var(--cor5));
   border-radius: 20px;
   padding: 10px 20px;
   margin-bottom: 50px;
-  margin-top: 50px;
+  margin-top: 30px;
   box-shadow: 2px 8px 10px var(--cor4);
 }
 
 .chat-resposta {
   background-image: linear-gradient(to right, var(--cor4), var(--cor3));
   border-radius: 50px;
-  padding: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin-bottom: 90px;
   position: relative;
   box-shadow: 2px 8px 10px var(--cor4);
