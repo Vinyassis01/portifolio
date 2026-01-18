@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API REST com Django REST Framework - Detalhes do Projeto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/home/vinyassis01/Documentos/portifolio/layout/index.html">← Voltar ao Portfólio</a>
+    </nav>
+  </header>
+
+  <main class="projeto-detalhes">
+    <!-- Seção Geral -->
+    <section id="geral">
+      <h1>API REST com Django REST Framework</h1>
+      <p class="descricao-principal">
+        API RESTful robusta e escalável desenvolvida com Django REST Framework, 
+        implementando autenticação JWT, paginação, filtros avançados e documentação 
+        automática com Swagger/OpenAPI.
+      </p>
+      <div class="info-basica">
+        <div class="info-item">
+          <strong>Status:</strong> Em Produção
+        </div>
+        <div class="info-item">
+          <strong>Versão:</strong> 2.1.0
+        </div>
+        <div class="info-item">
+          <strong>Última Atualização:</strong> Janeiro 2026
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Tecnologias -->
+    <section id="tecnologias">
+      <h2>Tecnologias Utilizadas</h2>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3>Backend</h3>
+          <ul>
+            <li>Python 3.11+</li>
+            <li>Django 5.0</li>
+            <li>Django REST Framework 3.14</li>
+            <li>PostgreSQL 15</li>
+            <li>Redis (Cache & Celery)</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3>Autenticação & Segurança</h3>
+          <ul>
+            <li>JWT (Simple JWT)</li>
+            <li>OAuth2</li>
+            <li>CORS Headers</li>
+            <li>Django Security Middleware</li>
+            <li>Rate Limiting</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3>Documentação & Testes</h3>
+          <ul>
+            <li>drf-spectacular (OpenAPI 3.0)</li>
+            <li>Swagger UI</li>
+            <li>pytest & pytest-django</li>
+            <li>Coverage.py</li>
+            <li>Factory Boy</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <h3>DevOps & Deploy</h3>
+          <ul>
+            <li>Docker & Docker Compose</li>
+            <li>Nginx</li>
+            <li>Gunicorn</li>
+            <li>GitHub Actions (CI/CD)</li>
+            <li>AWS/Heroku</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Metodologias -->
+    <section id="metodologias">
+      <h2>Metodologias e Boas Práticas</h2>
+      
+      <article class="metodologia">
+        <h3>Clean Code & Arquitetura</h3>
+        <ul>
+          <li><strong>Separation of Concerns:</strong> Separação clara entre models, serializers, views e services</li>
+          <li><strong>DRY Principle:</strong> Reutilização de código através de mixins e classes base</li>
+          <li><strong>SOLID Principles:</strong> Aplicação dos princípios de design orientado a objetos</li>
+          <li><strong>Repository Pattern:</strong> Abstração da camada de acesso a dados</li>
+        </ul>
+      </article>
+
+      <article class="metodologia">
+        <h3>Padrões de API REST</h3>
+        <ul>
+          <li><strong>RESTful Design:</strong> Endpoints semânticos seguindo convenções HTTP</li>
+          <li><strong>Versionamento:</strong> API versionada (v1, v2) para compatibilidade</li>
+          <li><strong>HATEOAS:</strong> Hypermedia links para navegação da API</li>
+          <li><strong>Status Codes:</strong> Uso correto de códigos HTTP (200, 201, 400, 404, 500)</li>
+        </ul>
+      </article>
+
+      <article class="metodologia">
+        <h3>Qualidade de Código</h3>
+        <ul>
+          <li><strong>PEP 8:</strong> Conformidade com style guide Python</li>
+          <li><strong>Type Hints:</strong> Anotações de tipo para melhor legibilidade</li>
+          <li><strong>Docstrings:</strong> Documentação inline seguindo Google Style</li>
+          <li><strong>Code Review:</strong> Pull requests com revisão obrigatória</li>
+          <li><strong>Linting:</strong> Black, Flake8, isort e mypy</li>
+        </ul>
+      </article>
+
+      <article class="metodologia">
+        <h3>Testes</h3>
+        <ul>
+          <li><strong>TDD:</strong> Desenvolvimento orientado a testes</li>
+          <li><strong>Cobertura:</strong> Mínimo de 85% de code coverage</li>
+          <li><strong>Testes Unitários:</strong> Testes isolados de models e serializers</li>
+          <li><strong>Testes de Integração:</strong> Testes end-to-end de endpoints</li>
+          <li><strong>Fixtures:</strong> Dados de teste com Factory Boy</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Seção Como Implementar -->
+    <section id="implementacao">
+      <h2>Como Implementar</h2>
+      
+      <div class="passo">
+        <h3>1. Clone o Repositório</h3>
+        <pre><code>git clone https://github.com/seu-usuario/api-drf-project.git
+cd api-drf-project</code></pre>
+      </div>
+
+      <div class="passo">
+        <h3>2. Configure o Ambiente Virtual</h3>
+        <pre><code>python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou
+venv\Scripts\activate  # Windows</code></pre>
+      </div>
+
+      <div class="passo">
+        <h3>3. Instale as Dependências</h3>
+        <pre><code>pip install -r requirements.txt</code></pre>
+      </div>
+
+      <div class="passo">
+        <h3>4. Configure as Variáveis de Ambiente</h3>
+        <pre><code>cp .env.example .env
+# Edite o arquivo .env com suas configurações:
+# - SECRET_KEY
+# - DATABASE_URL
+# - REDIS_URL
+# - ALLOWED_HOSTS</code></pre>
+      </div>
+
+      <div class="passo">
+        <h3>5. Execute as Migrações</h3>
+        <pre><code>python manage.py migrate</code></pre>
+      </div>
+
+      <div class="passo">
+        <h3>6. Crie um Superusuário</h3>
+        <pre><code>python manage.py createsuperuser</code></pre>
+      </div>
+
+      <div class="passo">
+        <h3>7. Inicie o Servidor</h3>
+        <pre><code>python manage.py runserver</code></pre>
+        <p>Acesse: <code>http://localhost:8000/api/v1/</code></p>
+        <p>Documentação: <code>http://localhost:8000/api/docs/</code></p>
+      </div>
+
+      <div class="passo">
+        <h3>8. (Opcional) Usando Docker</h3>
+        <pre><code>docker-compose up -d
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser</code></pre>
+      </div>
+    </section>
+
+    <!-- Seção Precauções -->
+    <section id="precaucoes">
+      <h2>Precauções e Considerações Importantes</h2>
+      
+      <div class="alerta alerta-critico">
+        <h3>⚠️ Segurança</h3>
+        <ul>
+          <li><strong>SECRET_KEY:</strong> NUNCA commite a SECRET_KEY em produção. Use variáveis de ambiente.</li>
+          <li><strong>DEBUG:</strong> Sempre configure <code>DEBUG = False</code> em produção.</li>
+          <li><strong>ALLOWED_HOSTS:</strong> Configure corretamente os hosts permitidos.</li>
+          <li><strong>CORS:</strong> Restrinja CORS_ALLOWED_ORIGINS apenas para domínios confiáveis.</li>
+          <li><strong>Rate Limiting:</strong> Implemente throttling para prevenir abuso da API.</li>
+        </ul>
+      </div>
+
+      <div class="alerta alerta-importante">
+        <h3>🔒 Autenticação</h3>
+        <ul>
+          <li><strong>Tokens JWT:</strong> Configure tempo de expiração adequado (15-30 minutos para access token).</li>
+          <li><strong>Refresh Tokens:</strong> Implemente rotação de refresh tokens.</li>
+          <li><strong>HTTPS:</strong> Use HTTPS em produção para proteger tokens em trânsito.</li>
+          <li><strong>Permissões:</strong> Sempre valide permissões em cada endpoint.</li>
+        </ul>
+      </div>
+
+      <div class="alerta alerta-performance">
+        <h3>⚡ Performance</h3>
+        <ul>
+          <li><strong>N+1 Queries:</strong> Use <code>select_related()</code> e <code>prefetch_related()</code>.</li>
+          <li><strong>Paginação:</strong> Sempre pagine resultados grandes (padrão: 100 itens/página).</li>
+          <li><strong>Cache:</strong> Implemente cache Redis para endpoints frequentes.</li>
+          <li><strong>Database Indexes:</strong> Adicione índices em campos de busca frequente.</li>
+          <li><strong>Async Tasks:</strong> Use Celery para tarefas pesadas (emails, relatórios).</li>
+        </ul>
+      </div>
+
+      <div class="alerta alerta-dados">
+        <h3>💾 Banco de Dados</h3>
+        <ul>
+          <li><strong>Backups:</strong> Configure backups automáticos diários.</li>
+          <li><strong>Migrações:</strong> Teste migrações em ambiente de staging antes de produção.</li>
+          <li><strong>Transações:</strong> Use transações atômicas para operações críticas.</li>
+          <li><strong>Connection Pooling:</strong> Configure pool de conexões adequadamente.</li>
+        </ul>
+      </div>
+
+      <div class="alerta alerta-monitoramento">
+        <h3>📊 Monitoramento</h3>
+        <ul>
+          <li><strong>Logging:</strong> Configure logs estruturados (JSON) para análise.</li>
+          <li><strong>Error Tracking:</strong> Use Sentry ou similar para rastreamento de erros.</li>
+          <li><strong>Métricas:</strong> Monitore tempo de resposta, taxa de erro e uso de recursos.</li>
+          <li><strong>Health Checks:</strong> Implemente endpoints de health check.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Seção Contribuir -->
+    <section id="contribuir">
+      <h2>Contribua com o Projeto</h2>
+      
+      <div class="contribuir-grid">
+        <div class="contribuir-card">
+          <h3>💬 Envie Sugestões via WhatsApp</h3>
+          <p>Tem ideias para melhorar o projeto? Entre em contato diretamente comigo!</p>
+          <a href="https://wa.me/5533999347743text=Olá!%20Tenho%20uma%20sugestão%20para%20o%20projeto%20API%20DRF:" 
+             class="btn btn-whatsapp" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            📱 Enviar Sugestão no WhatsApp
+          </a>
+          <p class="nota">Respondo geralmente em até 24 horas</p>
+        </div>
+
+        <div class="contribuir-card">
+          <h3>🔧 Contribua via Pull Request</h3>
+          <p>Quer contribuir com código? Siga estes passos:</p>
+          <ol>
+            <li>Fork o repositório</li>
+            <li>Crie uma branch: <code>git checkout -b feature/nova-funcionalidade</code></li>
+            <li>Commit suas mudanças: <code>git commit -m 'Add: nova funcionalidade'</code></li>
+            <li>Push para a branch: <code>git push origin feature/nova-funcionalidade</code></li>
+            <li>Abra um Pull Request</li>
+          </ol>
+          <a href="https://github.com/seu-usuario/api-drf-project/pulls" 
+             class="btn btn-github" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            🐙 Abrir Pull Request no GitHub
+          </a>
+          <p class="nota">Leia o CONTRIBUTING.md antes de contribuir</p>
+
+        <h3>📋 Diretrizes de Contribuição</h3>
+        <ul>
+          <li>Siga o style guide do projeto (PEP 8)</li>
+          <li>Adicione testes para novas funcionalidades</li>
+          <li>Atualize a documentação quando necessário</li>
+          <li>Mantenha commits atômicos e descritivos</li>
+          <li>Certifique-se de que todos os testes passam</li>
+        </ul>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Seu Nome. Todos os direitos reservados.</p>
+        <nav class="social-links">
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+        </nav>
+  </footer>
+</body>
+</html>
