@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="layout/index.css">
 </head>
 <body>
-    <header>      
+<header class="sobre-card">
         <h1>Vinycius Assis Foseca</h1>
-        <p>Desenvolvedor Full Stack Python | Docker | Rust </p>
+        <p>Desenvolvedor Full Stack Jr. | Python | Docker | Rust </p>
         <nav>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#contatos">Contato</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <!-- SEÇÃO 1: SOBRE -->
-        <section id="sobre">
+</header>
+<main>
+        
+<!-- SEÇÃO 1: SOBRE -->
+<section id="sobre">
             <h2>Sobre Mim</h2>
             
             <article class="sobre-intro">
@@ -62,16 +63,21 @@
                         <a href="layout/sobre/sobre.html" class="btn-detalhes">Ver Detalhes</a>
                 </article>
             </div>
-        </section>
+</section>
 
-        <!-- SEÇÃO 2: PROJETOS -->
-        <section id="projetos">
+<!-- SEÇÃO 2: PROJETOS -->
+<section id="projetos">
             <h2>Meus Projetos</h2>
-
+            <p class="project-descriptions">Nesta secao apresento brevemente meus projetos principais algins com maior complexidade
+            e outros ainda em fase mais inicial, esta secao apresenta breves detalhes e o conceito principal de cada um,
+            para maiores detalhes e so  clicar em "detalhes" que vc podera encontrar detalhes tecnicos e escolhas de design 
+            e podera contribuir .</p>
             <div class="projetos-grid">
-                <article class="projeto-card">
+
+                <!-- boi API -->
+                <article class="projeto-card featured">
                     <div class="projeto-imagem">
-                        <span>BoiAPI</span>
+                        <img src="layout/images/boiapi_image.png" alt="BoiAPI" class="img_project">
                     </div>
                     <div class="projeto-conteudo">
                         <h3>BoiAPI</h3>
@@ -89,26 +95,23 @@
                     </div>
                 </article>
 
+                <!-- STRIDE -->
                 <article class="projeto-card">
-                    <div class="projeto-imagem">
-                        <span>DallyFlix</span>
-                    </div>
+                   
                     <div class="projeto-conteudo">
-                        <h3>DaillyFlix web</h3>
-                        <p>Um diario web no estilo da netflix para o upload e organizacao de fotos e videos (momentos)
-                        pessoais em um formato similar a uma serie ou filme para uma experiencia confortavel e 
-                        alegre com personalizacao total de conteudo <br><br></p>
+                        <h3>STRIDE - logs gemini API</h3>
+                        <p>Um sistema para a avaliacao de vulnerabilidades de codigos no modelo STRIDE com a API do gemini .</p>
                         <div class="projeto-tags">
-                            <span class="tag">Django</span>
+                            <span class="tag">API</span>
+                            <span class="tag">gemini</span>
                             <span class="tag">Python</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
                         </div>
-                        <a href="layout/projetos/Daillyflix.html" class="btn-detalhes">Ver Detalhes</a>
+                        <a href="layout/projetos/Stride.html" class="btn-detalhes">Detalhes</a>
                     </div>
                 </article>
 
+                
+                <!-- docker jupyter -->
                 <article class="projeto-card">
                     <div class="projeto-imagem">
                         <span>Docker-Jupyter</span>
@@ -116,8 +119,7 @@
                     <div class="projeto-conteudo">
                         <h3>Docker enviroment Jupyter</h3>
                         <p>Um ambiente jupyter para o desenvolvimento com tensorFlow e scikit-learn 
-                        para o aprendizado de maquina, a imagem esta disponivel no meu DockerHub,
-                        com mapeamento de portas e volume <br><br></p>
+                        para o aprendizado de maquina .</p>
                         <div class="projeto-tags">
                             <span class="tag">Docker</span>
                             <span class="tag">Python</span>
@@ -130,15 +132,11 @@
                     </div>
                 </article>
 
-                <article class="projeto-card">
-                    <div class="projeto-imagem">
-                        <span>Recomendation</span>
-                    </div>
+                <!-- recomendation -->
+                <article class="projeto-card ">
                     <div class="projeto-conteudo">
                         <h3>Ml - Recomendation</h3>
-                        <p>Um projeto de recomendacao de imagens similares desenvolvido com python e Scikit-learn
-                        <br><br>
-                        </p>
+                        <p>Um projeto de recomendacao de imagens similares desenvolvido com python e Scikit-learn .</p>
                         <div class="projeto-tags">
                             <span class="tag">Scikit-learn</span>
                             <span class="tag">Python</span>
@@ -148,30 +146,33 @@
                     </div>
                 </article>
 
-                <article class="projeto-card">
+                <!-- daillyflix -->
+                <article class="projeto-card featured">
                     <div class="projeto-imagem">
-                        <span>STRIDE</span>
+                        <img src="layout/images/dailliflix.png" alt="Daillyflix" class="img_project">
                     </div>
                     <div class="projeto-conteudo">
-                        <h3>STRIDE - logs gemini API</h3>
-                        <p>Um sistema para a avaliacao de vulnerabilidades de codigos no modelo STRIDE com a API do gemini<br><br></p>
+                        <h3>DaillyFlix web</h3>
+                        <p>Um diario web no estilo da netflix para o upload e organizacao de fotos e videos (momentos)
+                        pessoais em um formato similar a uma serie ou filme para uma experiencia confortavel e 
+                        alegre com personalizacao total de conteudo </p>
                         <div class="projeto-tags">
-                            <span class="tag">API</span>
-                            <span class="tag">gemini</span>
+                            <span class="tag">Django</span>
                             <span class="tag">Python</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
                         </div>
-                        <a href="layout/projetos/Stride.html" class="btn-detalhes">Detalhes</a>
+                        <a href="layout/projetos/Daillyflix.html" class="btn-detalhes">Ver Detalhes</a>
                     </div>
                 </article>
-                <article class="projeto-card">
-                    <div class="projeto-imagem">
-                        <span>Transfer Learning</span>
-                    </div>
+
+                <!-- transfer learning -->
+                <article class="projeto-card ">
                     <div class="projeto-conteudo">
                         <h3>ML - Transfer Learning</h3>
                         <p>Um projeto de transferencia de aprendizado ,utilizando o conhecimento adquirido de um modelo
-                            pre treinado, e adicionando novas camadas .
-                        </p>
+                            pre treinado, e adicionando novas camadas .</p>
                         <div class="projeto-tags">
                             <span class="tag">Scikit-learn</span>
                             <span class="tag">Python</span>
@@ -182,110 +183,69 @@
                 </article>
                 
             </div>
-        </section>
+</section>
 
-        <!-- SEÇÃO 3: CONTATO -->
-        <section id="contato">
-      <div class="contato-container">  
-      <section id="contribuir">
-      <h2>Contatos e perfil</h2>
-      
-      <div class="contribuir-grid">
-        <div class="contribuir-card">
-          <h3>Envie seus projetos pelo Email</h3>
-          <p>Tem alguma necessidade, um projeto urgente, um software sob demanda, freela? Me mande um email !</p>
-          <br>
-          <a href="mailto:vinyciusassisfonseca@gmail.com?subject=Gostaria%20de%20conhecer%20melhor%20seus%20projetos&body=Olá,%20gostaria%20de%20saber..."
-             class="btn btn-whatsapp" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            Enviar email
-          </a>
-          <p class="nota">Respondo sempre </p>
+<section id="contatos">  
+    <h2>Contatos</h2>
+    <p class="contatos-descriptions"> Nesta secao vc pode encontrar meus contatos, conversar sobre tecnologias e curiosidades do mundo tech, conhecer meus trabalhos e entrar em contato para solicitar um orcamento para suas necessidades .</p>
+
+    <div class="container">
+    <!-- Card Principal: Terminal / API -->
+    <div class="card card-large">
+        <div class="status-badge"><span class="dot"></span> Online para Freelas</div>
+        <h3><i class="fas fa-terminal"></i> contact_api.py</h3>
+        <div class="code-block">
+            <span style="color: #ff7b72;">import</span> backend_dev<br><br>
+            me = backend_dev.<span style="color: #d2a8ff;">get_info</span>(name=<span style="color: #a5d6ff;">"Vinycius Assis Fonseca"</span>)<br>
+            <span style="color: #ff7b72;">if</span> project_urgent:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;me.<span style="color: #d2a8ff;">send_email</span>(subject=<span style="color: #a5d6ff;">"Novo Projeto"</span>)
         </div>
-        <br>
+        <a href="mailto:vinyciusassisfonseca@gmail.com?subject=Gostaria%20de%20conhecer%20melhor%20seus%20projetos&body=Olá,%20gostaria%20de%20saber..." class="btn"><i class="fas fa-envelope"></i> Enviar Email</a>
+    </div>
 
-        <div class="contribuir-card">
-          <h3> Conheca mais sobre mim</h3>
-          <p>Me siga no linkedIn e conheca meus conteudos e participe de discussoes e curiosidades
-          do mundo tech </p>
-          <ul>
-            <li>Conheca meus conteudos</li>
-            <li>Participe e contribua com sua opiniao</li>
-            <li>Ajude a comunidade</li>
-            </ul>
-            <br>
-          <a href="https://www.linkedin.com/in/vinycius-assis-fonseca-a74847272/" 
-             class="btn btn-whatsapp" 
-             target="_blank" 
-             rel="noopener noreferrer">
-             Acessar o LinkedIn
-          </a>
-          <p class="nota">sera muito bom seu feedback</p>
-      </div>
-      <div class="contribuir-card">
-        <br>
-          <h3>Disponibilidade</h3>
-          <p>Estou disponivel para diversos opcoes desde projetos simples, refatoracao,
-          manutencao de software, projetos freelancer, contratacao PJ e CLT para vagas home office e presencial em Minas Gerais</p>
-          <br>
-          <a href="mailto:vinyciusassisfonseca@gmail.com?subject=Gostaria%20de%20fazer%20um%20orcamento%20de%20projetos&body=Olá,%20gostaria%20de..."
-             class="btn btn-whatsapp" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            Fazer um orcamento
-          </a>
-      </div>
-      </div>
-    </section>
+    <!-- WhatsApp -->
+    <div class="card">
+        <h3><i class="fab fa-whatsapp" style="color: #25d366;"></i> WhatsApp</h3>
+        <p>Tem alguma necessidade, precisa automatizar processos, implementar boas praticas, seguranca? Entre em contato diretamente comigo!</p>
+        <a href=https://wa.me/5533999347743text=Olá!%20Tenho%20uma%20sugestão style="color: var(--accent-color); text-decoration: none; font-size: 0.8rem;">Chamar agora →</a>
+    </div>
 
-    <section id="contribuir">
-      <div class="contribuir-grid">
-        <div class="contribuir-card">
-            <h2>Conheca e Contribua </h2>
-          <h3>💬 Envie suas duvidas pelo WhatsApp</h3>
-          <p>Tem alguma necessidade, precisa automatizar processos, implementar boas praticas, seguranca? Entre em contato diretamente comigo!</p>
-          <br>
-          <a href="https://wa.me/5533999347743text=Olá!%20Tenho%20uma%20sugestão" 
-             class="btn btn-whatsapp" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            Envie no WhatsApp
-          </a>
-          <p class="nota">Respondo rapidamente</p>
-        </div>
-        <br>
-        <div class="contribuir-card">
-          <h3>🔧 Conhecer meu trabalho</h3>
-          <p>Quer conhecer, contribuir com meus códigos ? Siga estes passos:</p>
-          <ol>
-            <li>Acesse o github</li>
-            <li>Fork o repositório</li>
-            <li>Ajude com uma nova funcao, correcao, melhoria</li>
+    <!-- LinkedIn -->
+    <div class="card">
+        <h3><i class="fab fa-linkedin" style="color: #0a66c2;"></i> LinkedIn</h3>
+        <p>Networking e discussões sobre o mundo tech.</p>
+        <a href="https://www.linkedin.com/in/vinycius-assis-fonseca-a74847272/" style="color: var(--accent-color); text-decoration: none; font-size: 0.8rem;">Conectar →</a>
+    </div>
+
+    <!-- GitHub / Contribuição -->
+    <div class="card card-tall">
+        <h3><i class="fab fa-github"></i> Open Source</h3>
+        <p>Gosta do meu código? Sinta-se livre para contribuir ou fazer um fork.</p>
+        <ul style="padding-left: 15px; font-size: 0.8rem; color: var(--text-dim);">
+            <li>Acesse o repositório</li>
             <li>Abra um Pull Request</li>
-          </ol>
-          <br>
-          <a href="https://github.com/Vinyassis01" 
-             class="btn btn-whatsapp" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            🐙 Acessar o github
-          </a>
-          <p class="nota">Leia o README.md e o CONTRIBUTING.md para conhecer o projeto e contribuir</p>
-
-          <br>
-        <h3>📋 Diretrizes de Contribuição</h3>
-        <ul>
-          <li>toda acontribuicao e bem vinda </li>
-          <li>Abra um pull request para sua nova funcao, correcao ou melhoria</li>
-          <li>sua ajuda sera muito util</li>
-          <li>Certifique de ser claro nos commits</li>
+            <li>Seja claro nos commits</li>
         </ul>
-      </div>
-      </div>
-    </section>
-    </main>
-    <footer>
+        <a href="https://github.com/Vinyassis01" class="btn-detalhes" style="background: #21262d; border: 1px solid var(--border-color);">
+            <i class="fas fa-code-branch"></i> Ver GitHub
+        </a>
+    </div>
+
+    <!-- Localização / Disponibilidade -->
+    <div class="card card-large">
+        <h3><i class="fas fa-map-marker-alt" style="color: #f85149;"></i> Disponibilidade</h3>
+        <p>Atuando em Minas Gerais para vagas <strong>Presenciais</strong> e disponível para todo o Brasil em regime <strong>Home Office</strong> (CLT/PJ) e Freelancer para software personalizado.</p>
+        <div style="margin-top: 10px; display: flex; gap: 10px;">
+            <span style="background: #23863622; color: var(--success); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; border: 1px solid var(--success);">Refatoração</span>
+            <span style="background: #58a6ff22; color: var(--accent-color); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; border: 1px solid var(--accent-color);">Microserviços</span>
+            <span style="background: #23863622; color: var(--success); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; border: 1px solid var(--success);">Software personalizado</span>
+            <span style="background: #58a6ff22; color: var(--accent-color); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; border: 1px solid var(--accent-color);">implementacao</span>
+        </div>
+    </div>
+    </div>
+</section>
+</main>
+<footer>
         <p>&copy; 2026 Vinycius Assis Fonseca. Todos os direitos reservados.</p>
         <nav class="social-links">
             <a href="#" aria-label="GitHub">GitHub</a>
