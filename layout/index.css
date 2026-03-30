@@ -28,13 +28,14 @@ body, html {
 } /* <--- Faltava fechar essa chave! */
 
 #canvas-network {
+    background: #0d1117; /* Use a mesma cor do body para o fundo */
     position: fixed; 
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1; 
-    background: #0d1117; /* Use a mesma cor do body para o fundo */
+    pointer-events: none;
 }
 
 header {
@@ -104,73 +105,114 @@ section h2 {
     text-align: center;
     color: #58a6ff;
 }
-        /* Seção Sobre */
-        #sobre {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-        }
 
-        .sobre-intro {
-            text-align: center;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            padding-bottom: 5%;
-        }
+/* Estado inicial de QUALQUER seção que deva animar */
 
-        .project-descriptions{
-            text-align: center;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #ffffff;
-            padding-bottom: 5%;
-        }
+.hidden-section {
+    opacity: 1; /* A seção em si fica visível como container */
+    visibility: visible;
+    overflow: hidden; /* Evita quebras de layout durante o deslize dos filhos */
+    margin-bottom: 50px; /* Garante respiro entre as seções */
+}
 
-        .sobre-intro p {
-            font-size: 15px;
-            color: #ffffff;
-        }
+/* Estado quando a seção "entra" na tela */
+.hidden-section.show {
+    opacity: 1;
+    transform: translateX(10px);
+    visibility: visible;
+}
 
-        .sobre-detalhes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+/* 1. Reset nos filhos: todos começam invisíveis e um pouco abaixo */
+.hidden-section > * {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.9s ease-out;
+}
 
-        .sobre-card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            padding: 2rem;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
+/* 2. Quando a SEÇÃO PAI ganha a classe .show, os FILHOS aparecem */
+.hidden-section.show > * {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .sobre-card:hover {
-            transform: translateY(-5px);
-            border-color: #58a6ff;
-        }
+/* 3. Efeito Cascata: Atraso progressivo para cada filho */
+/* O 1º elemento (geralmente o h2) aparece primeiro */
+.hidden-section.show > *:nth-child(1) { transition-delay: 0.2s; }
+/* O 2º elemento (intro) aparece depois */
+.hidden-section.show > *:nth-child(2) { transition-delay: 0.4s; }
+/* O 3º elemento (grid de cards) aparece por último */
+.hidden-section.show > *:nth-child(3) { transition-delay: 0.6s; }
+/* Caso tenha mais elementos, adicione mais linhas ou use um delay padrão */
+.hidden-section.show > *:nth-child(n+4) { transition-delay: 0.8s; }
 
-        .sobre-card h3 {
-            color: #58a6ff;
-            margin-bottom: 1rem;
-        }
 
-        .sobre-card li {
-            color: #ffffff;
-        }
+/* Seção Sobre */
+#sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
 
-        .sobre-card p {
-            color: #ffffff;
-        }
+.sobre-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
 
- #servicos {
-        padding: 40px 20px;
-        background-color: rgba(0, 0, 0, 0.0);
-        color: #c9d1d9;
-    }
+.project-descriptions{
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffff;
+    padding-bottom: 5%;
+}
+
+.sobre-intro p {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.sobre-detalhes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.sobre-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    padding: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.sobre-card:hover {
+    transform: translateY(-5px);
+    border-color: #58a6ff;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.sobre-card h3 {
+    color: #58a6ff;
+    margin-bottom: 1rem;
+}
+
+.sobre-card li {
+    color: #ffffff;
+}
+
+.sobre-card p {
+    color: #ffffff;
+}
+
+#servicos {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #c9d1d9;
+   }
 
     .servicos-detalhes {
             display: grid;
@@ -180,10 +222,11 @@ section h2 {
 
 
  #projetos {
-        padding: 40px 20px;
-        background-color: rgba(0, 0, 0, 0.0);
-        color: #c9d1d9;
-    }
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #c9d1d9;
+}
+    
 
     #projetos h2 {
         text-align: center;
