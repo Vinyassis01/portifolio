@@ -45,7 +45,7 @@
         </article>
 
     <div class="sobre-detalhes">
-        <article class="sobre-card">
+        <article class="sobre-card",onclick="expand">
             <h3>Experiência</h3>
             <p> Projetos de automacao com Python, sistemas de gestao com python e Flet com UI pratica e intuitiva, coleta e 
             limpeza de dados atraves de web scraping ,treinamento e otimizacao de modelos de IA com scikit-learn e TensorFlow,otimizacao 
@@ -53,7 +53,7 @@
             <a href="layout/sobre/sobre.html" class="btn-detalhes">Ver Detalhes</a>
         </article>
 
-        <article class="sobre-card">
+        <article class="sobre-card",onclick="expand">
             <h3>Habilidades</h3>
             <ul>
                 <li>Python, Django</li>
@@ -68,7 +68,7 @@
             <a href="layout/sobre/sobre.html" class="btn-detalhes">Ver Detalhes</a>
         </article>
 
-        <article class="sobre-card">
+        <article class="sobre-card",onclick="expand">
             <h3>Educação</h3>
             <ul>
                 <li> Python backend AI - DIO</li>
@@ -79,6 +79,7 @@
             </ul>
             <a href="layout/sobre/sobre.html" class="btn-detalhes">Ver Detalhes</a>
         </article>
+        <div id="overlay" onclick="closeAllCards()"></div>
     </div>
 </section>
 
@@ -150,7 +151,7 @@
                             <span class="tag">Json</span>
                             <span class="tag">Django</span>
                         </div>
-                        <a href="layout/projetos/API.html" class="btn-detalhes">Ver Detalhes</a>
+                        <a href="projetos/projeto.html?id=projeto1" class="btn-detalhes">Ver Detalhes</a>
                     </div>
                 </article>
 
