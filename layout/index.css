@@ -109,7 +109,7 @@ section h2 {
 .content-left {
     background-color: rgba(244, 247, 249, 0.6);
     width: 40%;
-    display: flex;
+    display: flex-grow;
     flex-direction: column;
     justify-content: center;
     padding-left: 5%;
@@ -126,7 +126,7 @@ section h2 {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #2c3e50; /* Tom escuro */
     opacity: 0;
@@ -162,12 +162,12 @@ nav a {
 
 /* Lado Direito - 60% com Foto e Transição */
 .content-right {
-    width: 60%;
+    width: 100%;
     position: relative;
     background-image: url('image.jpg'); /* SUBSTITUA PELA SUA IMAGEM */
-        background-size: cover;
-        background-position: center;
-        background-color: #d8e1e8;
+    background-size: cover;
+    background-position: center;
+    background-color: #d8e1e8;
     }
 
 /* Efeito de Transição Suave para o Branco Frio */
@@ -202,7 +202,7 @@ nav a {
 }
 
 .profile-info p {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     color: #7f8c8d; /* Cinza azulado frio para o cargo */
     font-weight: 400;
     text-transform: uppercase;
@@ -626,6 +626,39 @@ border-radius: 8px;
                 gap: 1rem;
                 align-items: center;
             }
+            .projetos-grid {
+                display: grid-row;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                grid-auto-rows: 400px; /* Altura base dos cards */
+                margin-right:4px;
+            }
+            .featured {
+                max-width: 350px;
+            }
+            .container{
+                max-width: 350px;
+                width: 90%;
+                padding: 2px;
+                display: grid-row;
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 160px;
+            }
+            .card-large {
+                grid-column: span 2; 
+                grid-row: span 2; 
+            }
+            .card-tall { 
+                grid-row: span 2; 
+                grid-column: span 2; 
+            }
+            .img_project {
+                padding-top: 10%;
+                width: 100%;
+                height: 125%;
+                object-fit: cover;
+                opacity: 1.0;
+            }
+
         }
 
     @media screen and (max-width: 500px) {
