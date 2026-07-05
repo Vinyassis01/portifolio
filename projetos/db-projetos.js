@@ -12,28 +12,28 @@ const projetosDB = {
 
         //secao tecnologias
         "tech1":"Django",
-        "tech1li1":"",
-        "tech1li2":"",
+        "tech1li1":"Django Rest Framework",
+        "tech1li2":"Django-filter",
         "tech1li3":"",
         "tech1li4":"",
         "tech1li5":"",
 
         "tech2":"Beautiful Soup",
         "tech2li1":"",
-        "tech2li2":"Asyncio",
+        "tech2li2":"",
         "tech2li3":"",
         "tech2li4":"",
         "tech2li5":"",
 
         "tech3":"Asyncio",
-        "tech3li1":"",
+        "tech3li1":"Aiohttp",
         "tech3li2":"",
         "tech3li3":"",
         "tech3li4":"",
         "tech3li5":"",
 
         "tech4":"Django Rest Framework",
-        "tech4li1":"",
+        "tech4li1":"Django-filter",
         "tech4li2":"",
         "tech4li3":"",
         "tech4li4":"",

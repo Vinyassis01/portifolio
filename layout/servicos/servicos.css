@@ -1,0 +1,346 @@
+#canvas-network {
+    background: rgba(244, 247, 249, 1.0); /* Use a mesma cor do body para o fundo */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+    pointer-events: none;
+} 
+
+body{
+	background-color:  rgba(244, 247, 249, 0.4);
+}
+
+header{
+	margin: 5%;
+	padding: 5%;
+}
+
+/* Container das Frases Sobrepostas */
+.carousel-container {
+    overflow-x:show;
+    position: relative;
+    height: 160px; /* Altura suficiente para as frases */
+    width: 80%;
+    margin-bottom: 10%;
+}
+
+.phrase {
+	margin-left: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2c3e50; /* Tom escuro */
+    opacity: 0;
+    animation: fade-loop 12s infinite linear;
+}
+/* Delay para cada frase (4s por frase no total de 12s) */
+.phrase:nth-child(1) { animation-delay: 0s; }
+.phrase:nth-child(2) { animation-delay: 4s; }
+.phrase:nth-child(3) { animation-delay: 8s; }
+
+@keyframes fade-loop {
+    0% { opacity: 0; }
+    5% { opacity: 1; }  /* Aparece */
+    30% { opacity: 1; } /* Fica visível */
+    35% { opacity: 0; } /* Desaparece */
+    100% { opacity: 0; }
+}
+
+nav {
+    background: none;
+    margin-top: 1%;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+            
+nav a {
+    color: #555;
+    text-decoration: none;
+    font-size:1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #58a6ff; 
+}
+
+.titulo-principal{
+	margin-left: 20%;
+	color:#dddddd;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.apresentacao{
+	width: 80%;
+	margin-left: 5%;
+	color: #2c3e50;
+}
+
+.video-container{
+	margin: 10%;
+}
+
+.video-principal{
+	width: 100%;
+    max-width: 1200px; /* Limita a largura máxima */
+    height: auto;
+    border-radius: 24px; /* Define o arredondamento dos cantos */
+    overflow: hidden; /* Garante que o vídeo respeite a borda arredondada */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Configuração da Grade Principal */
+.bento-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+  grid-auto-rows: 180px; /* Altura base de cada linha */
+  gap: 16px; /* Espaçamento entre os cards */
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo Base dos Cards (Visual Moderno) */
+.bento-item {
+  background-color: rgba(212, 212, 212, 0.7);
+  border: 1px solid #B3B3B3;
+  border-radius: 24px; /* Cantos bem arredondados estilo Bento */
+  padding: 24px;
+  overflow: hidden; /* Garante que elementos internos respeitem o border-radius */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Distribuição de Tamanhos (Mapeamento do Grid) */
+.card-grande {
+  grid-column: span 2; /* Ocupa 2 colunas */
+  grid-row: span 2;    /* Ocupa 2 linhas */
+  background-color: rgba(212, 212, 212, 0.7); /* Cor escura para destacar */
+  color: #2c3e50;
+}
+
+.card-video {
+  grid-column: span 2; /* Ocupa 2 colunas */
+  grid-row: span 1;    /* Ocupa 1 linha */
+}
+
+.card-video .video-moderno {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz o vídeo preencher o card perfeitamente */
+  border-radius: 12px;
+}
+
+.card-pequeno {
+  grid-column: span 1; /* Ocupa 1 coluna */
+  grid-row: span 1;    /* Ocupa 1 linha */
+}
+
+.card-largo {
+  grid-column: span 2; /* Ocupa 2 colunas */
+  grid-row: span 1;    /* Ocupa 1 linha */
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+  .bento-container {
+    grid-template-columns: 1fr; /* Vira apenas 1 coluna */
+    grid-auto-rows: auto; /* Altura se adapta ao conteúdo */
+  }
+  
+  /* Reseta os tamanhos no mobile para não quebrar o layout */
+  .bento-item {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    min-height: 150px;
+  }
+}
+
+.servicos{
+	margin: 5%;
+}
+
+.servico-detalhe {
+    background-color: rgba(212, 212, 212, 0.7);
+    border: 1px solid #B3B3B3;
+    padding: 5%;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 5%;
+}
+
+.servico-descricao{
+	color: #2c3e50;
+}
+
+.servico-vantagens{
+	margin-bottom: 5%;
+	padding: 5%;
+	background-color:  rgba(244, 247, 249, 0.4);
+	border-radius: 12px;
+}
+
+li {
+  margin: 1%;
+}
+
+.btn-orcamento{
+    margin-left: 20%;
+	padding: 2%;
+	border-radius: 8px;
+	background-color:#2c3e50 ;
+	text-decoration: none;
+    color: #ffffff;
+}
+
+/* Estilo do Card dentro do Bento Grid */
+.card-documento {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.doc-header h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #111;
+}
+
+/* Área da Prévia */
+.doc-preview-container {
+  position: relative;
+  flex-grow: 1;
+  min-height: 130px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+}
+
+.doc-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none; /* Evita que o usuário interaja com o iframe na prévia */
+}
+
+/* Efeito de Hover na Prévia */
+.preview-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.doc-preview-container:hover .preview-overlay {
+  opacity: 1;
+}
+
+/* Botão de Download Moderno */
+.btn-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2%;
+  margin-left: 15%;
+  gap: 8px;
+  background-color: #0076ff;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 200;
+  max-width: 200px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-download:hover {
+  background-color: #0056b3;
+}
+
+/* --- ESTILOS DO MODAL (CONTAINER MAIOR) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(212, 212, 212, 0.7);
+  backdrop-filter: blur(4px); /* Efeito desfocado ao fundo */
+  display: none; /* Começa escondido */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  height: 85vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 { font-size: 1.25rem; margin: 0; }
+
+.btn-fechar {
+  background: none; border: none; font-size: 2rem; cursor: pointer; color: #666;
+}
+
+.modal-body { flex-grow: 1; background: #525659; }
+
+.doc-full-view { width: 90%; height: 100%; border: none; }
+
+
+
+footer {
+    padding: 10%;
+    background-color: rgba(212, 212, 212, 0.7);
+    color: #2c3e50;
+}

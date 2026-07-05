@@ -11,7 +11,7 @@
 </head>
 <body> 
 <canvas id="canvas-network"></canvas>
-<header>
+<header> 
     <div class="content-left">
         <div class="profile-info">
             <h1>Vinycius Assis Fonseca</h1>
@@ -38,91 +38,90 @@
 <!-- SEÇÃO 1: SOBRE -->
 <section id="sobre" class="hidden-section">
     <h2>Sobre Mim</h2>
-        <article class="sobre-intro">
-            <p>Desenvolvedor Fullstack Jr ,focado na criação de soluções eficientes comDjango e Flask,Web Scraping e Machine Learning, 
-            com experiência em TensorFlow e scikit-learn .Busco aplicar minhas habilidadesem soluções práticas e contribuir 
-            com o desenvolvimento ágil de software com foco no desenvolvimento open sourcee linux para softwares mais seguros e escalaveis</p>
-        </article>
+    <article class="sobre-intro">
+        <p>Desenvolvedor Fullstack Jr ,focado na criação de soluções eficientes comDjango e Flask,Web Scraping e Machine Learning, 
+        com experiência em TensorFlow e scikit-learn .Busco aplicar minhas habilidadesem soluções práticas e contribuir 
+        com o desenvolvimento ágil de software com foco no desenvolvimento open sourcee linux para softwares mais seguros e escalaveis</p>
+    </article>
 
-    <div class="sobre-detalhes">
-        <article class="sobre-card",onclick="expand">
-            <h3>Experiência</h3>
-            <p> Projetos de automacao com Python, sistemas de gestao com python e Flet com UI pratica e intuitiva, coleta e 
-            limpeza de dados atraves de web scraping ,treinamento e otimizacao de modelos de IA com scikit-learn e TensorFlow,otimizacao 
-            de hiperparametros e reducao de dimensionalidade ,com desenvolvimento agil  profissional e responsavel <br><br></p>
-            <a href="layout/sobre/sobre.html" class="btn-detalhes">Ver Detalhes</a>
-        </article>
+    <div class="bento-container">
+    <!-- Card Grande (Destaque) -->
+    <div class="bento-item card-grande sobre-card">
+        <h3>Experiência</h3>
+        <p> Projetos de automacao com Python, sistemas de gestao com python e Flet com UI pratica e intuitiva, coleta e 
+        limpeza de dados atraves de web scraping ,treinamento e otimizacao de modelos de IA com scikit-learn e TensorFlow,otimizacao 
+        de hiperparametros e reducao de dimensionalidade ,com desenvolvimento agil  profissional e responsavel <br><br></p>
+        <a href="layout/sobre/sobre.html" class="btn-detalhes">Ver Detalhes</a>
+    </div>
 
-        <article class="sobre-card",onclick="expand">
+    <div class="bento-item card-largo sobre-card">
             <h3>Habilidades</h3>
             <ul>
-                <li>Python, Django</li>
-                <li>TensorFlow, Scikit-learn</li>
-                <li>Docker, Kubernetes</li>
-                <li>Beautiful Soap, Flet, Node.js</li>
-                <li>MySQL, MongoDB, ORM</li>
-                <li>GitHub, linux</li>
-                <li>HTML5, CSS3, JavaScript</li>
+                <li>Python, Django, TensorFlow</li>
+                <li>Docker, Kubernetes, Scikit-learn</li>
+                <li>Github, linux, Flet, Node.js, MongoDB</li>
             </ul>
             <p><br></p>
             <a href="layout/sobre/sobre.html" class="btn-detalhes">Ver Detalhes</a>
-        </article>
+    </div>
 
-        <article class="sobre-card",onclick="expand">
+    <div class="bento-item card-largo sobre-card">
             <h3>Educação</h3>
             <ul>
-                <li> Python backend AI - DIO</li>
-                <li> Git e Github - DIO</li>
+                
                 <li> Machine Learning Training - DIO</li>
-                <li> Introducao a redes neurais : Perceptrons - Aprenda mais MEC</li>
-                <li> MCP - model context protocol - Anthropic</li>
+                <li> Model Context Protocol - Anthropic</li>
+                <li> Perceptrons - Aprenda mais MEC</li>
             </ul>
             <a href="layout/sobre/sobre.html" class="btn-detalhes">Ver Detalhes</a>
-        </article>
+        
         <div id="overlay" onclick="closeAllCards()"></div>
+    </div>
     </div>
 </section>
 
+<!-- Servicos -->
 <section id="servicos" class="hidden-section">
     <h2>Meus Servicos contrataveis</h2> 
     <article class="sobre-intro">
     <p>Aqui vc pode saber mais sobre os servicos prestados, como posso atender suas necessidades e regras do seu negocio
      estes sao os servicos que podem transformar sua empresa, rotina e trazer eficiencia e praticidade</p>
     </article>
-    <div class="sobre-detalhes">
-        <article class="sobre-card">
+    <div class="sobre-detalhes bento-container">
+        <article class="sobre-card card-grande">
             <h3>Desenvolvimento de Sites</h3>
             <p> Desenvolvimento, teste e implementacao de sites altamente personalizaveis e eficientes
             abrangendo todas as suas necessidades e sua imaginacao, com software seguro e confiavel o sucesso 
         e o proximo passo</p>
         </article>
-        <article class="sobre-card">
+        <article class="sobre-card card-largo">
             <h3>Construcao de Banco De Dados</h3>
             <p>Desenvolvimento de estruturas robustas de banco de dados, seguras e escalaveis para performance
             nos diferentes cenarios de uso, altamente personalizavel, de acordo com sua necessidade e orcamentos
             vc tera um sistema robusto e seguro .</p>
         </article>
 
-        <article class="sobre-card">
+        <article class="sobre-card card-largo">
             <h3>Desenvolvimento de API's</h3>
             <p> Todo software ou sistema precisa se comunicar, construo API's personalizadas para suas necessidades, rapidas
             seguras e intuitivas , conectando os dados aonde estejam com quem toma as decisoes e faz acontecer .</p>
         </article>
 
-        <article class="sobre-card">
+        <article class="sobre-card card-largo">
             <h3>Coleta de dados e limpeza</h3>
             <p> Saber as informacoes corretas e tudo, Crio sistemas que coletam as informacoes relevantes e necessarias para 
             sua tomada de decisao, de forma clara, etica e responsavel para que vc possa ter em suas maos as mais robustas
         informacoes para sua tomada de decisao .</p>
         </article>
 
-        <article class="sobre-card">
+        <article class="sobre-card card-largo">
             <h3>Software Personalizado</h3>
             <p> Aqui vc podera descrever suas necessidades, sua situacao para a criacao e implementacao
             de um software proprio exclusivo para sua necessidade .</p>
         </article>
 
     </div>
+    <a href="layout/servicos/servicos.html" class="btn-servicos">Mais Servicos</a>
 </section>
 
 <!-- SEÇÃO 2: PROJETOS -->
@@ -257,7 +256,7 @@
             <span style="color: #ff7b72;">if</span> project_urgent:<br>
             &nbsp;&nbsp;&nbsp;&nbsp;me.<span style="color: #d2a8ff;">send_email</span>(subject=<span style="color: #a5d6ff;">"Novo Projeto"</span>)
         </div>
-        <a href="mailto:vinyciusassisfonseca@gmail.com?subject=Gostaria%20de%20conhecer%20melhor%20seus%20projetos&body=Olá,%20gostaria%20de%20saber..." class="btn"><i class="fas fa-envelope"></i> Enviar Email</a>
+        <a href="mailto:vinyciusassisfonseca@gmail.com?subject=Gostaria%20de%20conhecer%20melhor%20seus%20projetos&body=Olá,%20gostaria%20de%20saber..." class="btn-detalhes"><i class="fas fa-envelope"></i> Enviar Email</a>
     </div>
 
     <!-- WhatsApp -->
@@ -283,7 +282,7 @@
             <li>Abra um Pull Request</li>
             <li>Seja claro nos commits</li>
         </ul>
-        <a href="https://github.com/Vinyassis01" class="btn-detalhes" style="background: #21262d; border: 1px solid var(--border-color);">
+        <a href="https://github.com/Vinyassis01" class="btn-detalhes">
             <i class="fas fa-code-branch"></i> Ver GitHub
         </a>
     </div>
