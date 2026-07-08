@@ -10,7 +10,25 @@
     <script src="layout/index.js" defer></script>
 </head>
 <body> 
+    <!-- Loader de Terminal Moderno -->
+    <div id="terminal-loader">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">vinycius@portfolio: ~</span>
+            </div>
+            <div id="terminal-content">
+                <div id="terminal-text"></div>
+                <span class="cursor"></span>
+            </div>
+        </div>
+    </div>
+
+<!-- efeito de network de background -->
 <canvas id="canvas-network"></canvas>
+
 <header> 
     <div class="content-left">
         <div class="profile-info">
@@ -34,16 +52,15 @@
     <div class="content-right"></div>
 </header>
 
-<main>       
-<!-- SEÇÃO 1: SOBRE -->
+<main>  
+<!-- Sobre -->
 <section id="sobre" class="hidden-section">
     <h2>Sobre Mim</h2>
-    <article class="sobre-intro">
-        <p>Desenvolvedor Fullstack Jr ,focado na criação de soluções eficientes comDjango e Flask,Web Scraping e Machine Learning, 
+        <p class="sobre-intro">Desenvolvedor Fullstack Jr ,focado na criação de soluções eficientes comDjango e Flask,Web Scraping e Machine Learning, 
         com experiência em TensorFlow e scikit-learn .Busco aplicar minhas habilidadesem soluções práticas e contribuir 
-        com o desenvolvimento ágil de software com foco no desenvolvimento open sourcee linux para softwares mais seguros e escalaveis</p>
-    </article>
-
+        com o desenvolvimento ágil de software com foco no desenvolvimento open sourcee linux para softwares mais seguros e escalaveis
+    </p>
+  
     <div class="bento-container">
     <!-- Card Grande (Destaque) -->
     <div class="bento-item card-grande sobre-card">
@@ -67,8 +84,7 @@
 
     <div class="bento-item card-largo sobre-card">
             <h3>Educação</h3>
-            <ul>
-                
+            <ul>     
                 <li> Machine Learning Training - DIO</li>
                 <li> Model Context Protocol - Anthropic</li>
                 <li> Perceptrons - Aprenda mais MEC</li>
@@ -82,12 +98,11 @@
 
 <!-- Servicos -->
 <section id="servicos" class="hidden-section">
-    <h2>Meus Servicos contrataveis</h2> 
-    <article class="sobre-intro">
-    <p>Aqui vc pode saber mais sobre os servicos prestados, como posso atender suas necessidades e regras do seu negocio
+    <h2>Meus Servicos</h2> 
+    <p class="sobre-intro">Aqui vc pode saber mais sobre os servicos prestados, como posso atender suas necessidades e regras do seu negocio
      estes sao os servicos que podem transformar sua empresa, rotina e trazer eficiencia e praticidade</p>
-    </article>
-    <div class="sobre-detalhes bento-container">
+
+    <div class="bento-container">
         <article class="sobre-card card-grande">
             <h3>Desenvolvimento de Sites</h3>
             <p> Desenvolvimento, teste e implementacao de sites altamente personalizaveis e eficientes
@@ -124,17 +139,17 @@
     <a href="layout/servicos/servicos.html" class="btn-servicos">Mais Servicos</a>
 </section>
 
-<!-- SEÇÃO 2: PROJETOS -->
+<!-- Projetos -->
 <section id="projetos" class="hidden-section">
             <h2>Meus Projetos</h2>
-            <p class="project-descriptions">Nesta secao apresento brevemente meus projetos principais algins com maior complexidade
+            <p class="sobre-intro">Nesta secao apresento brevemente meus projetos principais alguns com maior complexidade
             e outros ainda em fase mais inicial, esta secao apresenta breves detalhes e o conceito principal de cada um,
             para maiores detalhes e so  clicar em "detalhes" que vc podera encontrar detalhes tecnicos e escolhas de design 
             e podera contribuir .</p>
             <div class="projetos-grid">
 
                 <!-- boi API -->
-                <article class="projeto-card featured">
+                <article class="projeto-card card-grande">
                     <div class="projeto-imagem">
                         <img src="layout/images/boiapi.png" alt="BoiAPI" class="img_project">
                     </div>
@@ -175,7 +190,8 @@
                     
                     <div class="projeto-conteudo">
                         <h3>Docker enviroment Jupyter</h3>
-                        
+                        <p>Um ambiente python Jupyter preparado para desenvolvimento e teste com Scikit-learn .</p>
+
                         <div class="projeto-tags">
                             <span class="tag">Docker</span>
                             <span class="tag">Python</span>
@@ -203,7 +219,7 @@
                 </article>
 
                 <!-- daillyflix -->
-                <article class="projeto-card featured">
+                <article class="projeto-card card-grande">
                     <div class="projeto-imagem">
                         <img src="layout/images/dailliflix.png" alt="Daillyflix" class="img_project">
                     </div>
@@ -241,13 +257,14 @@
             </div>
 </section>
 
+<!-- Contatos -->
 <section id="contatos" class="hidden-section">  
     <h2>Contatos</h2>
-    <p class="contatos-descriptions"> Nesta secao vc pode encontrar meus contatos, conversar sobre tecnologias e curiosidades do mundo tech, conhecer meus trabalhos e entrar em contato para solicitar um orcamento para suas necessidades .</p>
+    <p class="sobre-intro"> Nesta secao vc pode encontrar meus contatos, conversar sobre tecnologias e curiosidades do mundo tech, conhecer meus trabalhos e entrar em contato para solicitar um orcamento para suas necessidades .</p>
 
     <div class="container">
     <!-- Card Principal: Terminal / API -->
-    <div class="card card-large">
+    <div class="card card-grande">
         <div class="status-badge"><span class="dot"></span> Online para Freelas</div>
         <h3><i class="fas fa-terminal"></i> contact_api.py</h3>
         <div class="code-block">
@@ -274,7 +291,7 @@
     </div>
 
     <!-- GitHub / Contribuição -->
-    <div class="card card-tall">
+    <div class="card card-pequeno">
         <h3><i class="fab fa-github"></i> Open Source</h3>
         <p>Sinta-se livre para contribuir ou fazer um fork.</p>
         <ul style="padding-left: 15px; font-size: 0.8rem; color: var(--text-dim);">
@@ -288,7 +305,7 @@
     </div>
 
     <!-- Localização / Disponibilidade -->
-    <div class="card card-large">
+    <div class="card card-grande">
         <h3><i class="fas fa-map-marker-alt" style="color: #f85149;"></i> Disponibilidade</h3>
         <p>Atuando em Minas Gerais para vagas <strong>Presenciais</strong> e disponível para todo o Brasil em regime <strong>Home Office</strong> (CLT/PJ) e Freelancer para software personalizado.</p>
         <div style="margin-top: 10px; display: flex; gap: 10px;"><p style="margin:1px">
@@ -301,6 +318,7 @@
     </div>
 </section>
 </main>
+
 <footer>
         <p>&copy; 2026 Vinycius Assis Fonseca. Todos os direitos reservados.</p>
         <nav class="social-links">
@@ -310,32 +328,83 @@
             <a href="#" aria-label="Instagram">Instagram</a>
         </nav>
 </footer>
+
 <script>
+    // animacao de load da pagina
+    const terminalText = document.getElementById('terminal-text');
+    const loader = document.getElementById('terminal-loader');
+    const startTime = Date.now();
+    const MIN_DURATION = 5000; // 5 segundos
+    
+    const messages = [
+        "vinycius@portfolio:~$ cargo build --release",
+        "Fetching dependencies...",
+        "Compiling bento-grid modules...",
+        "Initializing Python backend...",
+        "Optimizing Rust binaries...",
+        "Loading AI models (YOLO)...",
+        "Finalizing UI components...",
+        "System ready Launching..."
+    ];
+    
+    let msgIndex = 0;
+    
+    // Função que cria o loop de mensagens no terminal
+    function updateTerminal() {
+        if (msgIndex < messages.length) {
+            const p = document.createElement('p');
+            p.textContent = `> ${messages[msgIndex]}`;
+            terminalText.appendChild(p);
+            msgIndex++;
+    
+            // Mantém apenas as últimas 6 mensagens visíveis
+            if (terminalText.childNodes.length > 6) {
+                terminalText.removeChild(terminalText.firstChild);
+            }
+        } else {
+            msgIndex = 0; // Reinicia o loop de mensagens
+        }
+    }
+    
+    // Inicia o intervalo da animação (loop infinito)
+    const terminalInterval = setInterval(updateTerminal, 600);
+    
+    // Gerencia o fechamento após o carregamento e tempo mínimo
+    window.addEventListener('load', () => {
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(0, MIN_DURATION - elapsedTime);
+    
+        setTimeout(() => {
+            clearInterval(terminalInterval);
+            loader.classList.add('loader-hidden');
+        }, remainingTime);
+    });
+
+
+    // particulas de efeito de network
     const canvas = document.getElementById('canvas-network');
-        const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
+    let particlesArray;
+    let mouse = {
+        x: null,
+        y: null,
+        radius: 100 // Raio de influência do mouse
+    };
 
-        let particlesArray;
-        let mouse = {
-            x: null,
-            y: null,
-            radius: 100 // Raio de influência do mouse
-        };
+    // Ajusta o tamanho do canvas ao redimensionar a janela
+    window.addEventListener('resize', function() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        init();
+    });
 
-        // Ajusta o tamanho do canvas ao redimensionar a janela
-        window.addEventListener('resize', function() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            init();
-        });
-
-        // Captura movimento do mouse
-        window.addEventListener('mousemove', function(event) {
-            mouse.x = event.x;
-            mouse.y = event.y;
-        });
-
-        // Classe para criar cada ponto (nó) da rede
-        class Particle {
+    // Captura movimento do mouse
+    window.addEventListener('mousemove', function(event) {
+        mouse.x = event.x;
+        mouse.y = event.y;
+    });
+    // Classe para criar cada ponto (nó) da rede
+    class Particle {
             constructor(x, y, directionX, directionY, size, color) {
                 this.x = x;
                 this.y = y;
@@ -466,7 +535,7 @@
     todasAsSecoes.forEach((secao) => {
     observer.observe(secao);
     });
-   
 </script>
+
 </body>
 </html>
