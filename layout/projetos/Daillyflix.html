@@ -11,135 +11,189 @@
     <nav>
       <a href="https://vinyassis01.github.io/portifolio/">← Voltar ao Portfólio</a>
     </nav>
-  </header>
+</header>
 
-  <main class="projeto-detalhes">
-    <!-- Seção Geral -->
-    <section id="geral">
-      <h1>DaillyFlix</h1>
-      <p class="descricao-principal">
-        Um diario pessoal no estilo da Netflix para uma experiencia mais marcante e inovadora
-      </p>
-      <div class="info-basica">
-        <div class="info-item">
-          <strong>Status:</strong> Em Desenvolvimento
-        </div>
-        <div class="info-item">
-          <strong>Versão:</strong> 0.0.1
-        </div>
-        <div class="info-item">
-          <strong>Última Atualização:</strong> Janeiro 2026
-        </div>
+<main class="projeto-detalhes">
+  <!-- Seção Geral -->
+  <section id="geral" class="bento-container">
+    <div class="bento-item card-grande">
+    <h1>DaillyFlix</h1>
+    <p class="descricao-principal">
+      Um diario pessoal no estilo da Netflix para uma experiencia mais marcante e inovadora
+    </p>
+    </div>
+    <div class="info-basica bento-item card-largo">
+    <div class="info-item">
+      <strong>Status:</strong> Em Desenvolvimento
+    </div>
+    <div class="info-item">
+      <strong>Versão:</strong> 0.0.1
+    </div>
+      <div class="info-item">
+        <strong>Última Atualização:</strong> Janeiro 2026
       </div>
-    </section>
-     <section id="tecnologias">
-      <h2>Tecnologias Utilizadas</h2>
-      <div class="tech-grid">
-        <div class="tech-card">
-          <h3>Backend</h3>
-          <ul>
-            <li>Python 3.11+</li>
-            <li>Docker 19</li>
-            <li>TensorFlow</li>
-            <li>Jupyter</li>
-            <li>Redis (Cache & Celery)</li>
+    </div>
+    <div class="info-item bento-item card-largo">
+        <strong>Proximas features:</strong>
+        <ul>
+          <li>Pesquisa por arquivos locais</li>
+          <li>Streaming de cloud pessoal</li>
+          <li>Descricao aprimorada</li>
+        </ul>
+      </div>
+  </section>
+
+  <section id="tecnologias">
+    <h2>Tecnologias Utilizadas</h2>
+    <div class="tech-grid bento-container ">
+      <div class="tech-card bento-item card-largo">
+      <h3>Seguranca</h3>
+      <ul>
+          <li>implemetacao de hash</li>
+          <li>Multi Stage</li>
+          <li>DistroLess</li>
           </ul>
-        </div>
-        <div class="tech-card">
-        <h3>Seguranca</h3>
-        <ul>
-            <li>implemetacao de hash</li>
-            <li>Multi Stage</li>
-            <li>DistroLess</li>
-            </ul>
-        </div>
-        <div class="tech-card">
-        <h3>Deploy</h3>
-        <ul> <li>docker-compose</li>
-            <li>DockerHub</li>
-            <li>GitHUb</li>
-            </ul>
-        </div>
-    </div>
-        </section>
-            <!-- Seção Metodologias -->
-    <section id="metodologias">
-      <h2>Metodologias e Boas Práticas</h2>
-      
-      <article class="metodologia">
-        <h3>Clean Code & Arquitetura</h3>
-        <ul>
-          <li><strong>Separation of Concerns:</strong> Separação clara entre models, serializers, views e services</li>
-          <li><strong>DRY Principle:</strong> Reutilização de código através de mixins e classes base</li>
-          <li><strong>SOLID Principles:</strong> Aplicação dos princípios de design orientado a objetos</li>
-          <li><strong>Repository Pattern:</strong> Abstração da camada de acesso a dados</li>
-        </ul>
-      </article>
-      <article class="metodologia">
-        <h3>Clean Code & Arquitetura</h3>
-        <ul>
-          <li><strong>Separation of Concerns:</strong> Separação clara entre models, serializers, views e services</li>
-          <li><strong>DRY Principle:</strong> Reutilização de código através de mixins e classes base</li>
-          <li><strong>SOLID Principles:</strong> Aplicação dos princípios de design orientado a objetos</li>
-          <li><strong>Repository Pattern:</strong> Abstração da camada de acesso a dados</li>
-        </ul>
-      </article>
-      </section>
-      <!-- Seção Contribuir -->
-    <section id="contribuir">
-      <h2>Contribua com o Projeto</h2>
-      
-      <div class="contribuir-grid">
-        <div class="contribuir-card">
-          <h3>💬 Envie Sugestões via WhatsApp</h3>
-          <p>Tem ideias para melhorar o projeto? Entre em contato diretamente comigo!</p>
-          <a href="https://wa.me/5533999347743text=Olá!%20Tenho%20uma%20sugestão%20para%20o%20projeto%20API%20DRF:" 
-             class="btn btn-whatsapp" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            📱 Enviar Sugestão no WhatsApp
-          </a>
-          <p class="nota">Respondo geralmente em até 24 horas</p>
-        </div>
+      </div>
 
-        <div class="contribuir-card">
-          <h3>🔧 Contribua via Pull Request</h3>
-          <p>Quer contribuir com código? Siga estes passos:</p>
-        <ol>
-            <li>Fork o repositório</li>
-            <li>Crie uma branch: <code>git checkout -b feature/nova-funcionalidade</code></li>
-            <li>Commit suas mudanças: <code>git commit -m 'Add: nova funcionalidade'</code></li>
-            <li>Push para a branch: <code>git push origin feature/nova-funcionalidade</code></li>
-            <li>Abra um Pull Request</li>
-          </ol>
-          <a href="https://github.com/seu-usuario/api-drf-project/pulls" 
-             class="btn btn-github" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            🐙 Abrir Pull Request no GitHub
-          </a>
-          <p class="nota">Leia o CONTRIBUTING.md antes de contribuir</p>
-
-        <h3>📋 Diretrizes de Contribuição</h3>
+      <div class="tech-card bento-item card-grande">
+        <h3>Backend</h3>
         <ul>
-          <li>Siga o style guide do projeto (PEP 8)</li>
-          <li>Adicione testes para novas funcionalidades</li>
-          <li>Atualize a documentação quando necessário</li>
-          <li>Mantenha commits atômicos e descritivos</li>
-          <li>Certifique-se de que todos os testes passam</li>
+          <li>Python 3.11+</li>
+          <li>Docker 19</li>
+          <li>TensorFlow</li>
+          <li>Jupyter</li>
+          <li>Redis (Cache & Celery)</li>
         </ul>
       </div>
+      <div class="tech-card bento-item card-largo">
+      <h3>Deploy</h3>
+      <ul> <li>docker-compose</li>
+        <li>DockerHub</li>
+          <li>GitHUb</li>
+          </ul>
+      </div>
     </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2026 Seu Nome. Todos os direitos reservados.</p>
-        <nav class="social-links">
-            <a href="#" aria-label="GitHub">GitHub</a>
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-            <a href="#" aria-label="Twitter">Twitter</a>
-            <a href="#" aria-label="Instagram">Instagram</a>
-        </nav>
-  </footer>
-    </body>
-    </html>
+  </section>
+
+  <!-- Seção Metodologias -->
+  <section id="metodologias">
+
+    <h2>Metodologias e Boas Práticas</h2>
+    <div class="bento-container">
+
+    <article class="metodologia bento-item card-grande">
+      <h3>Clean Code & Arquitetura</h3>
+      <ul>
+        <li><strong>Separation of Concerns:</strong> Separação clara entre models, serializers, views e services</li>
+        <li><strong>DRY Principle:</strong> Reutilização de código através de mixins e classes base</li>
+        <li><strong>SOLID Principles:</strong> Aplicação dos princípios de design orientado a objetos</li>
+        <li><strong>Repository Pattern:</strong> Abstração da camada de acesso a dados</li>
+      </ul>
+    </article>
+
+    <article class="metodologia bento-item card-longo">
+      <h3>Clean Code & Arquitetura</h3>
+      <ul>
+        <li><strong>Separation of Concerns:</strong> Separação clara entre models, serializers, views e services</li>
+        <li><strong>DRY Principle:</strong> Reutilização de código através de mixins e classes base</li>
+        <li><strong>SOLID Principles:</strong> Aplicação dos princípios de design orientado a objetos</li>
+        <li><strong>Repository Pattern:</strong> Abstração da camada de acesso a dados</li>
+      </ul>
+    </article>
+
+    <article class="metodologia bento-item card-grande">
+      <h3>Clean Code & Arquitetura</h3>
+      <ul>
+        <li><strong>Separation of Concerns:</strong> Separação clara entre models, serializers, views e services</li>
+        <li><strong>DRY Principle:</strong> Reutilização de código através de mixins e classes base</li>
+        <li><strong>SOLID Principles:</strong> Aplicação dos princípios de design orientado a objetos</li>
+        <li><strong>Repository Pattern:</strong> Abstração da camada de acesso a dados</li>
+      </ul>
+    </article>
+
+  </div>
+  </section>
+
+  <!-- Seção Contribuir -->
+  <section id="contribuir">
+    <h2>Contribua com o Projeto</h2>
+    <div class="bento-container">
+
+      <div class="bento-item card-longo">
+        <h3>🔧 Contribua via Pull Request</h3>
+        <p>Quer contribuir com código? Siga estes passos:</p>
+        <ol>
+          <li>Fork o repositório</li>
+          <li>Crie uma branch: <code>git checkout -b feature/nova-funcionalidade</code></li>
+          <li>Commit suas mudanças: <code>git commit -m 'Add: nova funcionalidade'</code></li>
+          <li>Push para a branch: <code>git push origin feature/nova-funcionalidade</code></li>
+          <li>Abra um Pull Request</li>
+        </ol>
+        <a href="https://github.com/seu-usuario/api-drf-project/pulls" 
+            class="btn btn-github" 
+            target="_blank" 
+            rel="noopener noreferrer">
+          🐙 Abrir Pull Request no GitHub
+        </a>
+        <p class="nota">Leia o CONTRIBUTING.md antes de contribuir</p>
+      <h3>📋 Diretrizes de Contribuição</h3>
+      <ul>
+        <li>Siga o style guide do projeto (PEP 8)</li>
+        <li>Adicione testes para novas funcionalidades</li>
+        <li>Atualize a documentação quando necessário</li>
+        <li>Mantenha commits atômicos e descritivos</li>
+        <li>Certifique-se de que todos os testes passam</li>
+      </ul>
+    </div>
+
+      <div class="bento-item card-largo">
+      <h3>💬 Envie Sugestões via WhatsApp</h3>
+        <p>Tem ideias para melhorar o projeto? Entre em contato diretamente comigo!</p>
+        <a href="https://wa.me/5533999347743text=Olá!%20Tenho%20uma%20sugestão%20para%20o%20projeto%20API%20DRF:" 
+            class="btn btn-whatsapp" 
+            target="_blank" 
+            rel="noopener noreferrer">
+          📱 Enviar Sugestão no WhatsApp
+        </a>
+      <p class="nota">Respondo geralmente em até 24 horas</p>
+      </div>
+
+      <div class="bento-item card-grande">
+      <h3>💬 Envie Sugestões via WhatsApp</h3>
+        <p>Tem ideias para melhorar o projeto? Entre em contato diretamente comigo!</p>
+        <a href="https://wa.me/5533999347743text=Olá!%20Tenho%20uma%20sugestão%20para%20o%20projeto%20API%20DRF:" 
+            class="btn btn-whatsapp" 
+            target="_blank" 
+            rel="noopener noreferrer">
+          📱 Enviar Sugestão no WhatsApp
+        </a>
+      <p class="nota">Respondo geralmente em até 24 horas</p>
+      </div>
+
+      <div class="bento-item card-largo">
+      <h3>💬 Envie Sugestões via WhatsApp</h3>
+        <p>Tem ideias para melhorar o projeto? Entre em contato diretamente comigo!</p>
+        <a href="https://wa.me/5533999347743text=Olá!%20Tenho%20uma%20sugestão%20para%20o%20projeto%20API%20DRF:" 
+            class="btn btn-whatsapp" 
+            target="_blank" 
+            rel="noopener noreferrer">
+          📱 Enviar Sugestão no WhatsApp
+        </a>
+      <p class="nota">Respondo geralmente em até 24 horas</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+<footer>
+  <p>&copy; 2026 Seu Nome. Todos os direitos reservados.</p>
+    <nav class="social-links">
+      <a href="#" aria-label="GitHub">GitHub</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" aria-label="Twitter">Twitter</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+    </nav>
+</footer>
+</body>
+</html>

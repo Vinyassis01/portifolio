@@ -7,39 +7,67 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+<canvas id="canvas-network"></canvas>
+<header>
     <nav>
       <a href="https://vinyassis01.github.io/portifolio/">← Voltar ao Portfólio</a>
     </nav>
-  </header>
+</header>
 
-  <main class="projeto-detalhes">
-    <!-- Seção Geral -->
-    <section id="geral">
-      <h1>API REST com Django REST Framework</h1>
-      <p class="descricao-principal">
+<main class="projeto-detalhes">
+<!-- Seção Geral -->
+  <section id="geral">
+    <h1>API REST com Django REST Framework</h1>
+    <p class="section-description">
         API RESTful robusta e escalável desenvolvida com Django REST Framework, 
         implementando autenticação JWT, paginação, filtros avançados e documentação 
         automática com Swagger/OpenAPI.
-      </p>
-      <div class="info-basica">
-        <div class="info-item">
-          <strong>Status:</strong> Em Produção
+    </p>
+    <div class="bento-container">
+      <div class="bento-item card-longo">
+          <!-- uma descricao da situacao atual do projeto,
+          onde esta cada feature, como esta o desenvolvimento das
+          features, objetivos de curto prazo -->
+          <strong>Status:</strong>
+          <p>Breve descricao de onde o projeto esta :</p>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
-        <div class="info-item">
+
+        <div class="bento-item card-largo">
           <strong>Versão:</strong> 2.1.0
         </div>
-        <div class="info-item">
+
+        <div class="bento-item card-grande">
+          <strong>Proximas features:</strong>
+          <ul>
+            <li>Pesquisa por arquivos locais</li>
+            <li>Streaming de cloud pessoal</li>
+            <li>Descricao aprimorada</li>
+          </ul>
+        </div>
+
+        <div class="bento-item card-largo">
           <strong>Última Atualização:</strong> Janeiro 2026
         </div>
-      </div>
-    </section>
 
-    <!-- Seção Tecnologias -->
-    <section id="tecnologias">
+      </div>
+  </section>
+
+<!-- Seção Tecnologias -->
+  <section id="tecnologias">
       <h2>Tecnologias Utilizadas</h2>
-      <div class="tech-grid">
-        <div class="tech-card">
+      <p class="section-description">As tecnologias usadas no projeto tem a finalidade de obter o maximo de seguranca e performance,
+      nesta secao apresento as tecnologias e ferramentas usadas no seu 
+      desenvolvimento, e como cada uma contribui para cada parte do sistema, e os
+      motivos por tras de suas escolhas .</p>
+      <div class="bento-container">
+        <div class="bento-item card-grande">
           <h3>Backend</h3>
           <ul>
             <li>Python 3.11+</li>
@@ -49,7 +77,7 @@
             <li>Redis (Cache & Celery)</li>
           </ul>
         </div>
-        <div class="tech-card">
+        <div class="bento-item card-largo">
           <h3>Autenticação & Segurança</h3>
           <ul>
             <li>JWT (Simple JWT)</li>
@@ -59,7 +87,7 @@
             <li>Rate Limiting</li>
           </ul>
         </div>
-        <div class="tech-card">
+        <div class="bento-item card-grande">
           <h3>Documentação & Testes</h3>
           <ul>
             <li>drf-spectacular (OpenAPI 3.0)</li>
@@ -69,7 +97,7 @@
             <li>Factory Boy</li>
           </ul>
         </div>
-        <div class="tech-card">
+        <div class="bento-item card-largo">
           <h3>DevOps & Deploy</h3>
           <ul>
             <li>Docker & Docker Compose</li>
@@ -80,13 +108,15 @@
           </ul>
         </div>
       </div>
-    </section>
+  </section>
 
-    <!-- Seção Metodologias -->
+<!-- Seção Metodologias -->
     <section id="metodologias">
       <h2>Metodologias e Boas Práticas</h2>
-      
-      <article class="metodologia">
+      <p class="section-description">Apresento um pouco das praticas e conceitos
+      usados neste projeto e como cada um influenciou o desenvolvimento e a arquitetura do projeto, tambem um pouco dos conceitos e boas praticas para adotar em uma fase posterior do projeto .</p>
+      <div class="bento-container">
+      <article class="bento-item card-largo">
         <h3>Clean Code & Arquitetura</h3>
         <ul>
           <li><strong>Separation of Concerns:</strong> Separação clara entre models, serializers, views e services</li>
@@ -96,7 +126,7 @@
         </ul>
       </article>
 
-      <article class="metodologia">
+      <article class="bento-item card-longo">
         <h3>Padrões de API REST</h3>
         <ul>
           <li><strong>RESTful Design:</strong> Endpoints semânticos seguindo convenções HTTP</li>
@@ -106,7 +136,7 @@
         </ul>
       </article>
 
-      <article class="metodologia">
+      <article class="bento-item card-grande">
         <h3>Qualidade de Código</h3>
         <ul>
           <li><strong>PEP 8:</strong> Conformidade com style guide Python</li>
@@ -117,7 +147,7 @@
         </ul>
       </article>
 
-      <article class="metodologia">
+      <article class="bento-item card-largo">
         <h3>Testes</h3>
         <ul>
           <li><strong>TDD:</strong> Desenvolvimento orientado a testes</li>
@@ -127,71 +157,77 @@
           <li><strong>Fixtures:</strong> Dados de teste com Factory Boy</li>
         </ul>
       </article>
+    </div>
     </section>
 
-    <!-- Seção Como Implementar -->
+<!-- Seção Como Implementar -->
+<!-- mudar o layout conforme o numero 
+de passos e seu conteudo -->
     <section id="implementacao">
       <h2>Como Implementar</h2>
-      
-      <div class="passo">
-        <h3>1. Clone o Repositório</h3>
-        <pre><code>git clone https://github.com/seu-usuario/api-drf-project.git
-cd api-drf-project</code></pre>
+    <div class="bento-container">
+
+    <div class="bento-item card-largo">
+      <h3>1. Clone o Repositório</h3>
+      <pre><code>git clone https://github.com/seu-usuario/api-drf-project.git
+      cd api-drf-project</code></pre>
       </div>
 
-      <div class="passo">
+      <div class="bento-item card-grande">
         <h3>2. Configure o Ambiente Virtual</h3>
         <pre><code>python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# ou
-venv\Scripts\activate  # Windows</code></pre>
+        source venv/bin/activate  # Linux/Mac
+        # ou
+      venv\Scripts\activate  # Windows</code></pre>
       </div>
 
-      <div class="passo">
+      <div class="bento-item card-largo">
         <h3>3. Instale as Dependências</h3>
         <pre><code>pip install -r requirements.txt</code></pre>
       </div>
 
-      <div class="passo">
+      <div class="bento-item card-grande">
         <h3>4. Configure as Variáveis de Ambiente</h3>
         <pre><code>cp .env.example .env
-# Edite o arquivo .env com suas configurações:
-# - SECRET_KEY
-# - DATABASE_URL
-# - REDIS_URL
-# - ALLOWED_HOSTS</code></pre>
+    # Edite o arquivo .env com suas configurações:
+    # - SECRET_KEY
+    # - DATABASE_URL
+    # - REDIS_URL
+    # - ALLOWED_HOSTS</code></pre>
       </div>
 
-      <div class="passo">
+      <div class="bento-item card-largo">
         <h3>5. Execute as Migrações</h3>
         <pre><code>python manage.py migrate</code></pre>
       </div>
 
-      <div class="passo">
+      <div class="bento-item card-grande">
         <h3>6. Crie um Superusuário</h3>
         <pre><code>python manage.py createsuperuser</code></pre>
       </div>
 
-      <div class="passo">
+      <div class="bento-item card-grande">
         <h3>7. Inicie o Servidor</h3>
         <pre><code>python manage.py runserver</code></pre>
         <p>Acesse: <code>http://localhost:8000/api/v1/</code></p>
         <p>Documentação: <code>http://localhost:8000/api/docs/</code></p>
       </div>
 
-      <div class="passo">
+      <div class="bento-item card-largo">
         <h3>8. (Opcional) Usando Docker</h3>
         <pre><code>docker-compose up -d
-docker-compose exec web python manage.py migrate
-docker-compose exec web python manage.py createsuperuser</code></pre>
+        docker-compose exec web python manage.py migrate
+        docker-compose exec web python manage.py createsuperuser</code></pre>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Seção Precauções -->
-    <section id="precaucoes">
+<!-- Seção Precauções -->
+  <section id="precaucoes">
       <h2>Precauções e Considerações Importantes</h2>
       
-      <div class="alerta alerta-critico">
+      <div class="bento-container">
+      <div class="alerta alerta-critico card-longo">
         <h3>⚠️ Segurança</h3>
         <ul>
           <li><strong>SECRET_KEY:</strong> NUNCA commite a SECRET_KEY em produção. Use variáveis de ambiente.</li>
@@ -202,7 +238,7 @@ docker-compose exec web python manage.py createsuperuser</code></pre>
         </ul>
       </div>
 
-      <div class="alerta alerta-importante">
+      <div class="alerta alerta-importante card-grande">
         <h3>🔒 Autenticação</h3>
         <ul>
           <li><strong>Tokens JWT:</strong> Configure tempo de expiração adequado (15-30 minutos para access token).</li>
@@ -212,7 +248,7 @@ docker-compose exec web python manage.py createsuperuser</code></pre>
         </ul>
       </div>
 
-      <div class="alerta alerta-performance">
+      <div class="alerta alerta-performance card-grande">
         <h3>⚡ Performance</h3>
         <ul>
           <li><strong>N+1 Queries:</strong> Use <code>select_related()</code> e <code>prefetch_related()</code>.</li>
@@ -223,7 +259,7 @@ docker-compose exec web python manage.py createsuperuser</code></pre>
         </ul>
       </div>
 
-      <div class="alerta alerta-dados">
+      <div class="alerta alerta-dados card-grande">
         <h3>💾 Banco de Dados</h3>
         <ul>
           <li><strong>Backups:</strong> Configure backups automáticos diários.</li>
@@ -233,7 +269,7 @@ docker-compose exec web python manage.py createsuperuser</code></pre>
         </ul>
       </div>
 
-      <div class="alerta alerta-monitoramento">
+      <div class="alerta alerta-monitoramento card-grande">
         <h3>📊 Monitoramento</h3>
         <ul>
           <li><strong>Logging:</strong> Configure logs estruturados (JSON) para análise.</li>
@@ -242,14 +278,16 @@ docker-compose exec web python manage.py createsuperuser</code></pre>
           <li><strong>Health Checks:</strong> Implemente endpoints de health check.</li>
         </ul>
       </div>
+
+    </div>
     </section>
 
-    <!-- Seção Contribuir -->
+<!-- Seção Contribuir -->
     <section id="contribuir">
       <h2>Contribua com o Projeto</h2>
       
-      <div class="contribuir-grid">
-        <div class="contribuir-card">
+      <div class="bento-container">
+        <div class="bento-item card-grande">
           <h3>💬 Envie Sugestões via WhatsApp</h3>
           <p>Tem ideias para melhorar o projeto? Entre em contato diretamente comigo!</p>
           <a href="https://wa.me/5533999347743text=Olá!%20Tenho%20uma%20sugestão%20para%20o%20projeto%20API%20DRF:" 
@@ -261,7 +299,7 @@ docker-compose exec web python manage.py createsuperuser</code></pre>
           <p class="nota">Respondo geralmente em até 24 horas</p>
         </div>
 
-        <div class="contribuir-card">
+        <div class="bento-item card-longo">
           <h3>🔧 Contribua via Pull Request</h3>
           <p>Quer contribuir com código? Siga estes passos:</p>
           <ol>
@@ -288,11 +326,25 @@ docker-compose exec web python manage.py createsuperuser</code></pre>
           <li>Certifique-se de que todos os testes passam</li>
         </ul>
       </div>
+
+       <div class="bento-item card-grande">
+          <h3>💬 Envie Sugestões via WhatsApp</h3>
+          <p>Tem ideias para melhorar o projeto? Entre em contato diretamente comigo!</p>
+          <a href="https://wa.me/5533999347743text=Olá!%20Tenho%20uma%20sugestão%20para%20o%20projeto%20API%20DRF:" 
+             class="btn btn-whatsapp" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            📱 Enviar Sugestão no WhatsApp
+          </a>
+          <p class="nota">Respondo geralmente em até 24 horas</p>
+        </div>
+
       </div>
     </section>
-  </main>
 
-  <footer>
+</main>
+
+<footer>
     <p>&copy; 2026 Seu Nome. Todos os direitos reservados.</p>
         <nav class="social-links">
             <a href="#" aria-label="GitHub">GitHub</a>
@@ -300,6 +352,164 @@ docker-compose exec web python manage.py createsuperuser</code></pre>
             <a href="#" aria-label="Twitter">Twitter</a>
             <a href="#" aria-label="Instagram">Instagram</a>
         </nav>
-  </footer>
+</footer>
+
+<script>
+  // particulas de efeito de network
+    const canvas = document.getElementById('canvas-network');
+    const ctx = canvas.getContext('2d');
+    let particlesArray;
+    let mouse = {
+        x: null,
+        y: null,
+        radius: 100 // Raio de influência do mouse
+    };
+
+    // Ajusta o tamanho do canvas ao redimensionar a janela
+    window.addEventListener('resize', function() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        init();
+    });
+
+    // Captura movimento do mouse
+    window.addEventListener('mousemove', function(event) {
+        mouse.x = event.x;
+        mouse.y = event.y;
+    });
+    // Classe para criar cada ponto (nó) da rede
+    class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+
+            // Desenha o ponto individual
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = '#d8e1e8'; // Azul brilhante
+                ctx.fill();
+            }
+
+            // Atualiza posição e verifica colisão com mouse
+            update() {
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
+
+                // Interação com o mouse (expansão/contração)
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                if (distance < mouse.radius + this.size) {
+                    if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+                        this.x += 3;
+                    }
+                    if (mouse.x > this.x && this.x > this.size * 10) {
+                        this.x -= 3;
+                    }
+                    if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+                        this.y += 3;
+                    }
+                    if (mouse.y > this.y && this.y > this.size * 10) {
+                        this.y -= 3;
+                    }
+                }
+
+                this.x += this.directionX;
+                this.y += this.directionY;
+                this.draw();
+            }
+        }
+
+        // Cria a população de partículas
+        function init() {
+            particlesArray = [];
+            let numberOfParticles = (canvas.height * canvas.width) / 16000; // Densidade
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 2) + 1;
+                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * 2) - 1;
+                let directionY = (Math.random() * 2) - 1;
+                let color = '#000000';
+
+                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+
+        // Função para desenhar as linhas conectando os pontos próximos
+        function connect() {
+            let opacityValue = 1;
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a; b < particlesArray.length; b++) {
+                    let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
+                    + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+                    
+                    // Se a distância for pequena o suficiente, desenha a linha
+                    if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                        opacityValue = 1 - (distance / 20000);
+                        ctx.strokeStyle = 'rgba(0 ,0 ,0,' + opacityValue + ')';
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        // Loop de animação
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+            connect();
+        }
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        init();
+        animate();
+
+    const observerOpcoes = {
+    threshold: 0.15, // Dispara quando 15% da seção aparece
+    rootMargin: "0px 0px -50px 0px" // Dispara um pouco antes de tocar o fundo da tela
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            // Opcional: parar de observar após mostrar (animação ocorre só uma vez)
+            // observer.unobserve(entry.target);
+        } else {
+            // Se quiser que a animação aconteça toda vez que subir/descer o scroll:
+            entry.target.classList.remove('show');
+        }
+    });
+    }, observerOpcoes);
+
+    // Seleciona TODAS as seções que têm a classe
+    const todasAsSecoes = document.querySelectorAll('.hidden-section');
+
+    // Aplica o observador em cada uma delas
+    todasAsSecoes.forEach((secao) => {
+    observer.observe(secao);
+    });
+</script>
+
 </body>
 </html>
