@@ -197,7 +197,7 @@
     .content-right {
         width: 100%;
         position: relative;
-        background-image: url('image.jpg'); /* SUBSTITUA PELA SUA IMAGEM */
+        background-image: url('image.jpg');
         background-size: cover;
         background-position: center;
         background-color: #d8e1e8;
@@ -756,14 +756,19 @@
       
     .content-left {
         background-color: rgba(244, 247, 249, 0.6);
-        width: 20%;
-        display: flex-grow;
-        flex-direction: column;
+        width: 100%;
+        display: block;
         justify-content: center;
         padding-left: 5%;
         padding-bottom: 2%;
         z-index: 2;
     }
+
+     .content-right {
+        background: none;
+        display: none;
+        }
+    
 
     .sobre-card {
         background-color: rgba(212, 212, 212, 1.0);
@@ -846,6 +851,7 @@
 
     #mobile {
     display: none;
+    z-index: -1;
     }
 
     .bento-container {
@@ -881,9 +887,9 @@
     }
 
     .btn-servicos {
-        margin-top: 5%;
-        padding: 10px 20px;
-        width: 2fr;
+        margin-top: 25px;
+        padding: 10px;
+        width: 3fr;
         background: #1B263B;
         color: white;
         text-decoration: none;
