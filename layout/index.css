@@ -4,7 +4,7 @@
         --card-bg: #161b22;
         --accent-color: #58a6ff;
         --text-main: #c9d1d9;
-        --text-dim: #8b949e;
+        --text-dim: #000000;
         --border-color: #30363d;
         --success: #238636;  
     }
@@ -15,6 +15,14 @@
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     }
+
+    @font-face {
+        font-family: 'Instagram Sans Local';
+        src: url('fontes/InstagramSansScript-Regular.ttf') format('truetype'); /* Ajuste o nome do arquivo aqui */
+        font-weight: normal;
+        font-style: cursive;
+    }
+
     
     #terminal-loader {
         position: fixed;
@@ -155,7 +163,7 @@
     .content-left {
         background-color: rgba(244, 247, 249, 0.6);
         width: 40%;
-        display: flex-grow;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         padding-left: 5%;
@@ -163,7 +171,7 @@
     }
     /* Container das Frases Sobrepostas */
     .carousel-container {
-        overflow-x:show;
+        overflow: hidden;
         position: relative;
         height: 250px; /* Altura suficiente para as frases */
         width: 100%;
@@ -197,10 +205,8 @@
     .content-right {
         width: 100%;
         position: relative;
-        background-image: url('image.jpg');
+        background-position: center;        
         background-size: cover;
-        background-position: center;
-        background-color: #d8e1e8;
         }
     
     /* Efeito de Transição Suave para o Branco Frio */
@@ -211,27 +217,65 @@
         left: 0;
         width: 100%;
         height: 100%;
-        /* Dois gradientes: um lateral e um inferior para o "fade-out" */
-        background: 
-            /* Suavização Lateral (Esquerda para Direita) */
-            linear-gradient(to right, #f4f7f9 0%, rgba(244, 247, 249, 0) 30%),
-            /* Suavização Inferior (Baixo para Cima) */
-            linear-gradient(to top, #f4f7f9 0%, rgba(244, 247, 249, 0) 12%);
         z-index: 1;
     }
+
+
+    .linhas_externas {
+        border: 8px solid #30363d;
+        display: flex;
+      
+        border-radius: 10%;
+        background-size: cover;
+        transition: transform 0.4s ease, border-color 0.3s ease;
+    }
+
+    .linhas_externas:hover {
+        transform: translateY(-5px);
+        border-color: #2D3A3A;
+    }
     
+    .linhas_internas {
+        display: flex;
+        border: 8px solid #30363d;
+        margin: 5% 5% 5% 8%;
+        padding: 2%;
+        border-radius: 6%;
+        background-size: cover;
+        transition: transform 0.4s ease, border-color 0.3s ease;
+    }
+    
+    .linhas_internas:hover{
+        transform: translateX(-15%);
+        border-color: #2D3A3A;
+    }
+    
+    .image {
+        position: cover;
+        width: 950px;
+        height: 550px;
+        border-radius: 6%;
+    }
+    
+    aside {
+        display: flex;
+        justify-content: center; /* Centraliza na horizontal */
+        align-items: center;     /* Centraliza na vertical */
+        min-height: 100vh;       /* Garante que o fundo ocupe a altura toda da tela */
+        width: 100%;             /* Ocupa a largura total */
+    }
+
     /* classe para Nome e Cargo */
     .profile-info {
         margin-bottom: 40px; /* Espaço entre o nome e as frases do carrossel */
     }
     
-    .profile-info h1 {
-        font-family: 'La Belle Aurore', cursive;
+     .profile-info h1 {
+        font-family: 'Instagram Sans Local'; 
         font-size: 2.5rem;
-        color: #1a252f; /* Tom escuro profundo */
+        color: #1a252f; 
         margin-bottom: 5px;
-        text-transform: uppercase;
-        letter-spacing: -1px;
+       
     }
     
     .profile-info p {
@@ -251,7 +295,7 @@
     }
     
     section {
-        min-height: 100vh;
+        
         padding: 4rem 2rem;
         background-image: none;
     }
@@ -261,6 +305,7 @@
     }
     
     section h2 {
+        font-family: 'Instagram Sans Local';
         font-size: 2.5rem;
         margin-bottom: 2rem;
         text-align: center;
@@ -348,18 +393,48 @@
         color: #2D3A3A;
     }
 
+    .lista-customizada {
+        list-style: none; /* Tira o marcador padrão */
+        padding: 0;
+    }
+
+    .lista-customizada li {
+      position: relative;
+      padding-left: 25px; /* Espaço para o ícone */
+      margin-bottom: 10px;
+    }
+    
+    .lista-customizada li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;  /* Tamanho maior do círculo */
+      height: 12px; /* Tamanho maior do círculo */
+      background-color: #2D3A3A; /* Cor desejada */
+      border-radius: 50%; /* Deixa redondo */
+    }
+
+
 /* Secao Servicos */
     #servicos {
-        padding: 40px 20px;
+        padding: 0;
         background-color: rgba(0, 0, 0, 0.0);
         color: #c9d1d9;
        }
+
+    .img-service-site {
+        height: 280px;
+        width: 500px;
+        border-radius: 8px;
+        margin: 2px;
+    }
 
 /* Secao Projetos */
     .projetos-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-auto-rows: 300px; /* Altura base dos cards */
         gap: 20px;
         max-width: 1200px;
         margin: 0 auto;
@@ -384,7 +459,7 @@
     
     .projeto-imagem {
         overflow: hidden;
-        background: #000;
+        background: none;
         padding-top: 2px;
         display: flex;
         align-items: center;
@@ -415,9 +490,11 @@
     }
     
     .img_project {
-        padding-top: 10%;
-        width: 100%;
-        height: 135%;
+        background-color: rgba(212, 242, 212, 1.0);
+        border-radius: 12px;
+        margin: 2%;
+        width: 95%;
+        height: 95%;
         object-fit: cover;
         opacity: 1.0;
     }
@@ -499,7 +576,7 @@
     .bento-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
-      grid-auto-rows: 180px; /* Altura base de cada linha */
+    /*  grid-auto-rows: 180px; Altura base de cada linha */
       gap: 16px; /* Espaçamento entre os cards */
       padding: 16px;
       max-width: 1200px;
@@ -523,7 +600,7 @@
     .card-grande {
       grid-column: span 2; /* Ocupa 2 colunas */
       grid-row: span 2;    /* Ocupa 2 linhas */
-      background-color: rgba(212, 212, 212, 0.7); /* Cor escura para destacar */
+      background-color: rgba(212, 212, 212, 1.0); /* Cor escura para destacar */
       color: #2c3e50;
     }
     
@@ -548,7 +625,7 @@
     }
     
     h2, h3 { margin-top: 0; color: rgba(0,0,0 ,0.8); }
-    p { font-size: 0.9rem; color: var(--text-dim); line-height: 1.4; }
+
     
     .code-block {
         font-family: 'Courier New', Courier, monospace;
@@ -672,11 +749,11 @@
     }
     
     .projeto-conteudo p {
-        font-size: 0.95rem;
         color: #21262d;
         line-height: 1.2;
         margin-bottom: 15px;
     }
+    
     
      /* Distribuição de Tamanhos (Mapeamento do Grid) */
     .card-grande {

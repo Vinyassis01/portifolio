@@ -1,0 +1,78 @@
+/* Container principal que alinha os blocos lado a lado */
+.experiencia-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background-color: transparent; /* Cor de fundo sutil opcional */
+}
+
+/* Estilo individual de cada bloco de projeto */
+.experiencia-container > div {
+    flex: 1;
+    min-width: 250px; /* Garante que os blocos quebrem linha em telas menores */
+    max-width: 250px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Criação da linha vertical curta entre os blocos */
+.experiencia-container > div:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -15px; /* Centraliza a linha no espaço do gap */
+    top: 15%;      /* Controla a altura onde a linha começa */
+    height: 70%;   /* Controla o comprimento curto da linha */
+    width: 2px;    /* Espessura da linha */
+    background-color: #ccc; /* Cor da linha vertical */
+}
+
+/* Estilização dos parágrafos explicativos */
+.experiencia-container p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 15px;
+    min-height: 80px; /* Alinha o início das listas visualmente */
+}
+
+/* Estilização das listas de tópicos */
+.experiencia-container ul {
+    list-style-type: none; /* Remove as bolinhas padrão */
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Estilização dos itens da lista */
+.experiencia-container li {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Marcador personalizado discreto para os itens da lista */
+.experiencia-container li::before {
+    content: "•";
+    color: #007acc; /* Cor do marcador (ajuste conforme seu tema) */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+
+/* Adaptação para telas de celular (tira a linha vertical e foca no empilhamento) */
+@media (max-width: 768px) {
+    .experiencia-container > div:not(:last-child)::after {
+        display: none; 
+    }
+    .experiencia-container > div {
+        border-bottom: 1px solid #eee; /* Linha horizontal sutil no mobile */
+        padding-bottom: 20px;
+        max-width: 100%;
+    }
+}

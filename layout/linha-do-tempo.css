@@ -1,0 +1,154 @@
+
+/* configuracoes base */
+    :root {
+        /* Altere aqui a velocidade do carrossel (menor = mais rápido) */
+        --velocidade: 55s; 
+    }
+
+/* container do carrosel */
+    .carrossel-wrapper {
+        position: relative;
+        width: 100%;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+    
+    .linha {
+        margin-left: 10%;
+        margin-right: 10%;
+    	display: flex;
+    	flex-direction: row;
+        gap: 6px; /* Espaçamento moderno entre as divs */
+        padding: 5px;
+        position: relative;
+        width: max-content; /* faz com que os elementos se expandam alem da tela */
+        z-index: 2; 
+        scrollbar-width: thin; /* esconde a scroll bar */
+        animation: rolagemInfinita var(--velocidade) linear infinite;
+    }
+    
+    .linha:hover {
+        animation-play-state: paused; /* pausa quando passar por cima */
+    }
+    
+    .linha-item{
+    	padding: 6px;
+    	margin: 4px;
+    	border-radius: 12px;
+    	display: flex;
+        flex-direction: column;
+    	height: 80px;
+    	position: relative;
+        background-color: rgba(212, 212, 212, 1.0);
+        border: 1px solid #B3B3B3;
+        transition: transform 0.4s ease, border-color 0.3s ease;
+        overflow: hidden;
+        align-items: center; /* Centraliza o texto verticalmente */
+        justify-content: center;
+        min-width: 120px; /* Garante uma largura mínima na horizontal */
+        flex-shrink: 0; /* Impede que o flexbox esmague as caixas */
+    }
+    
+    .linha-item-none {
+        border: none;
+        background-color: transparent;
+        min-width: 120px; /* Garante uma largura mínima na horizontal */
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        height: 80px;
+        position: relative;
+    }
+
+    .xp-itens {
+        font-size: 0.85rem;
+    }
+
+    .linha-item p {
+        margin: 0;
+        padding-top: -14px;
+        display: flex;
+        text-align: center;
+    }
+
+    .linha-item li {
+        list-style: upper-roman;
+        margin-right: 10px;
+        font-size: 0.85rem;
+
+    }
+
+    .date-item {
+        color: #2D3A3A;
+        margin: 0;
+        display: block;
+        font-size: 1.1;
+    }
+
+    .img-item {
+        height: 100px;
+        width: 100px;
+        border-radius: 10%;
+    }
+
+    .img-destaque {
+        padding: 2px;
+        height: 110px;
+        width: 110px;
+        border-radius: 50%;
+    }
+
+    /* Itens que você quer que destaquem e fiquem mais compridos na horizontal */
+    .item-curto {
+        max-width: 180px; 
+    }
+    
+    .item-longo {
+        min-height: 220px; 
+    }
+    
+    .item-longo2 {
+        min-height: 260px; 
+        max-width: 140px;
+    }
+    
+    .item-redondo {
+        min-height: 120px; 
+        min-width: 120px;
+        border-radius: 50%;
+    }
+    
+    .linha-item:hover {
+        transform: translateY(-5px);
+        border: solid 1px;
+        border-color: #2D3A3A;
+    }
+    
+     .timeline {
+         position: relative;
+         max-width: 100%;
+         margin-left: 4px;
+    }
+    
+     .timeline::after {
+         content: '';
+         position: absolute;
+         height: 4px;
+         background-color: #dee2e6; /* Cor da linha de ligação */
+         top: 10px;
+         bottom: 10px;
+         left: 2px; /* Alinhamento da linha à esquerda das caixas */
+         margin-left: 2px;
+         z-index: 1;
+     }
+ 
+
+/* animacao de rolagem */
+    @keyframes rolagemInfinita {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%); /* Volta ao início de forma imperceptível */
+        }
+    }
